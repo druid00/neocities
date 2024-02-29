@@ -1,0 +1,191 @@
+/* v1.1
+
+/* root settings */
+
+:root {
+	/* column widths */
+	--widthSidebar: 275px;
+	--widthContent: 900px;
+
+	/* general page and text colours */
+	--colorBackground: #191713;
+	--colorText: #ACAC95;
+
+	/* accent colours */
+	--colorPrimary: #474C40;
+	--colorSecondary: #b19272;
+	--colorTertiary: #715344;
+
+	/* border and box shadow colours */ 
+	--colorBorder: #dbb281; /*var(--colorPrimary);*/
+	--colorShadow: var(--colorPrimary);
+
+	/* fonts */
+	--fontTitle: "Quattrocento", serif;
+	--fontText: 'El Messiri', serif;
+	--fontHeader: 'Quattrocento', serif; /*'Bigshot One', serif;*/
+
+	/* borders */
+	--borderSolid: 1px solid var(--colorBorder);
+	--borderDotted: 1px dotted var(--colorBorder);
+	--borderTree: 1px solid var(--colorBorder);
+	--borderHeading: 1px solid var(--colorBorder);
+
+	/* gallery settings */
+	--columnCount: 2;
+	--columnGap: 16px;
+
+	--sidebarGap: 20px;
+
+	/* background image FOR ALL PAGES */
+	--imageBackground: url(../img/art/birds.png);
+	--imageFrame: url(../img/frame.png);
+
+	--duration: 3s;
+}
+
+
+/* global site structure */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--colorBackground);
+	background-image: var(--imageBackground);
+	background-size: cover;
+	background-attachment: fixed;
+
+	color: var(--colorText);
+	font-family: var(--fontText);
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--fontHeader);
+	font-weight: bold;
+	letter-spacing: 0.25em;
+	text-transform: lowercase;
+
+	text-transform: uppercase;
+	font-weight: normal;
+
+	color: var(--colorText);
+	padding: 0.3em 30px 0.2em;
+	margin-top: 50px;
+
+	background-color: var(--colorPrimary);
+	border-radius: 1000px 0 1000px 0;
+	text-shadow: 1px 1px var(--colorBackground);
+}
+
+h1::after, h2::after, h3::after,
+h4::after, h5::after, h6::after {
+	content: "☉";
+	margin-left: .5em;
+	display: inline-block;
+	
+}
+
+h1 {
+	font-size: 180%;
+}
+
+p, li {
+	font-size: 120%;
+	margin-left: 1em;
+}
+
+.watchlist ul {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.watchlist li {
+	font-style: italic;
+	list-style-type: disclosure-closed;
+}
+
+a {
+	color: var(--colorTertiary);
+	font-weight: bold;
+	transition: .5s
+}
+
+a::after {
+	content: "🔗";
+	display: inline-block;
+	font-size: .75em;
+}
+
+a:hover {
+	color: var(--colorPrimary);
+}
+
+b {
+	color: var(--colorSecondary);
+}
+
+.interests b {
+	text-transform: uppercase;
+}
+
+.page {
+	background-color: var(--colorBackground);
+	max-width: var(--widthContent);
+	padding: 3em;
+	padding-top: 8em;
+
+	background-image: var(--imageFrame);
+	background-repeat: repeat-x;
+	background-size: 500px;
+
+	margin: 5em;
+}
+
+a.home::after {
+	content: none;
+}
+
+.home {
+	display: inline;
+	float: right;
+	color: var(--colorTertiary);
+
+	margin-top: 0.5em;
+	margin-right: 1.5em;
+
+	background-color: var(--colorBackground);
+	border-radius: 50em;
+	padding: 0.3em 0.5em 0.1em;
+	line-height: 1em;
+	text-decoration: none;
+}
+
+a.home:hover {
+	background-color: var(--colorSecondary);
+	color: var(--colorBackground);
+}
+
+/* mobile */
+
+@media screen and (max-width: 650px) {
+	.home {
+		display:block;
+		float: none;
+		text-align: right;
+		margin: 50px 0 0 0;
+		padding: 0;
+		
+	}
+	h1 {
+		margin-top: 0.25em;
+	}
+	.page {
+		padding-top: 6.5em;
+		margin-left:  0;
+		margin-right: 0;
+	}
+	
+}

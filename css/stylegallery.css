@@ -1,0 +1,208 @@
+/* v1.1
+
+/* root settings */
+
+:root {
+	/* column widths */
+	--widthSidebar: 275px;
+	--widthContent: 900px;
+
+	/* general page and text colours */
+	--colorBackground: #191713;
+	--colorText: #cec8bf;
+
+	/* accent colours */
+	--colorPrimary: #dbb281;
+	--colorSecondary: #9598bb;
+	--colorTertiary: #aa4c3d;
+
+	/* border and box shadow colours */ 
+	--colorBorder: #dbb281; /*var(--colorPrimary);*/
+	--colorShadow: var(--colorPrimary);
+
+	/* fonts */
+	--fontTitle: "Bigshot One", serif;
+	--fontText: 'El Messiri', serif;
+	--fontHeader: 'Bigshot One', serif; /*'Bigshot One', serif;*/
+
+	/* borders */
+	--borderSolid: 1px solid var(--colorBorder);
+	--borderDotted: 1px dotted var(--colorBorder);
+	--borderTree: 1px solid var(--colorBorder);
+	--borderHeading: 1px solid var(--colorBorder);
+
+	/* gallery settings */
+	--columnCount: 2;
+	--columnGap: 16px;
+
+	--sidebarGap: 20px;
+
+	/* background image FOR ALL PAGES */
+	--imageBackground: url("../img/art/wreck.jpg");
+	--galleryBackground: url("../img/art/blizzard.jpg");
+
+	--duration: 3s;
+}
+
+
+/* global site structure */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--colorBackground);
+	background-image: var(--imageBackground);
+	background-size: cover;
+	background-attachment: fixed;
+
+	color: var(--colorText);
+	font-family: var(--fontText);
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--colorPrimary);
+	font-family: var(--fontHeader);
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	text-transform: lowercase;
+
+	font-style: italic; 
+	margin: 0;
+}
+
+h1 {
+	font-size: 500%;
+	line-height: 0.6em;
+
+	text-shadow: 7px 0px var(--colorBackground);
+}
+
+.home {
+	display:inline;
+	float:right;
+	font-size: 600%;
+	margin-top: .5em;
+	transition: 0.5s;
+	text-decoration: none;
+}
+a.home::after {
+	content: none;
+}
+
+a {
+	color: var(--colorSecondary);
+	font-weight: bold;
+	transition: 0.5s;
+}
+a::after {
+	content: "🔗";
+	display: inline-block;
+	font-size: .75em;
+}
+a:hover{
+	color: var(--colorTertiary);
+}
+
+
+hr {
+	color: var(--colorBorder);
+	background-color: var(--colorBorder);
+	height: 1px;
+	border: none;
+}
+
+h1::after,
+h2::after,
+h3::after,
+h4::after,
+h5::after,
+h6::after {
+	content: " ⚔";
+	margin-left: .25em;
+	display: inline-block;
+	font-size: .75em;
+}
+
+img {
+	box-shadow: 4px 4px var(--colorBorder);
+	border: var(--borderSolid);
+	border-radius: 5px;
+}
+
+img.png {
+	box-shadow: none;
+	border: none;
+}
+
+img.png:hover {
+	box-shadow: none;
+	border: none;
+}
+
+
+/* gallery */
+
+.gallery {
+	/* Prevent vertical gaps */
+	line-height: 0;
+
+	-webkit-column-count: var(--columnCount);
+	-webkit-column-gap:   var(--columnGap);
+	-moz-column-count:    var(--columnCount);
+	-moz-column-gap:      var(--columnGap);
+	column-count:         var(--columnCount);
+	column-gap:           var(--columnGap);
+}
+
+.gallery div, .gallery img {
+	/* Just in case there are inline attributes */
+	width: 100% !important;
+	height: auto !important;
+	margin-bottom: var(--columnGap);
+	transition: all 0.75s;
+}
+
+.gallery img:hover {
+	filter: brightness(1.2);
+	border-color: var(--colorTertiary);
+	box-shadow: 4px 4px var(--colorTertiary);
+}
+
+
+/* mobile */
+
+@media screen and (max-width: 650px) {
+	:root {
+		/* gallery settings */
+		--columnCount: 1;
+	}
+
+	h1 {
+		font-size: 300%;
+		line-height: 0.6em;
+	}
+
+	.home {
+		display:inline;
+		float:right;
+		font-size: 300%;
+		margin-top: .1em;
+	}
+}
+
+.page {
+	max-width: var(--widthContent);
+	margin: auto;
+
+	background-image: var(--galleryBackground);
+	
+	background-size: cover;
+	background-attachment: fixed;
+	border: 3px double var(--colorPrimary) ;
+	padding: 3em;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
