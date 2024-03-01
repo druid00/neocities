@@ -21,7 +21,7 @@
 	--colorShadow: var(--colorPrimary);
 
 	/* fonts */
-	--fontTitle: "Quattrocento", serif;
+	--fontTitle: "Gloock", serif;
 	--fontText: "Arsenal", serif;
 
 	/* borders */
@@ -54,20 +54,35 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 
-	color: var(--colorText);
+	color: var(--colorSecondary);
 	font-family: var(--fontText);
 }
 
 h1, h2, h3, h4, h5, h6 {
-	background-color: var(--colorPrimary);
-	color: var(--colorBackground);
-	padding: 1em;
+	color: var(--colorBorder);
+	font-family: var(--fontText);
+	margin-bottom: 0;
 }
 
+h1 {
+	font-family: var(--fontTitle);
+	color: var(--colorText);
+	font-weight: normal;
+	font-size: 100px;
+	line-height: 55px;
+	font-style: italic;
+	margin: 0;
+}
+
+h3 {
+	font-size: 30px;
+}
 
 a {
 	font-weight: bold;
+	color: var(--colorSecondary)
 }
+
 
 a::after {
 	content: "⤴";
@@ -76,22 +91,25 @@ a::after {
 }
 
 .page {
-	background-color: var(--colorBackground);
 	max-width: var(--widthContent);
 	padding: 1em;
 	margin-top: 15em;
+	margin-left: 100px;
 }
 
+#HCB_comment_box {
+	padding: 2em;
+	background-color: var(--colorText);
+}
 
-/* html boxes */
-
+/* boxes */
 #hcb_form_website, #hcb_form_name, #hcb_form_content {
 	font-family: "montserrat";
 	font-size: 14px;
 	padding: 8px;
 	margin: 0;
 
-	background-color: var(--colorBackground);
+	background-color: #c5a178;
 	border: 1px solid var(--colorPrimary);
 	border-radius: 3px;
 	color: var(--colorBorder);
@@ -99,8 +117,24 @@ a::after {
 	resize: vertical;
 }
 
+.admin-link a::after {
+	content: none;
+} 
+
+
+
 /* mobile */
 
-@media screen and (max-width: 650px) {
-	
+@media screen and (max-width: 800px) {
+	.page {
+		max-width: 100%;
+		padding: 1em;
+		margin-top: 15em;
+		margin-left: 0;
+	}
+
+	h1 {
+		font-size: 50px;
+		line-height: 25px;
+	}
 }
