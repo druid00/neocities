@@ -156,7 +156,7 @@ a.home::after {
 	float: right;
 	color: var(--colorTertiary);
 
-	margin-top: 0.5em;
+	margin-top: 0.6em;
 	margin-right: 1.5em;
 
 	background-color: var(--colorBackground);
@@ -170,6 +170,9 @@ a.home:hover {
 	background-color: var(--colorSecondary);
 	color: var(--colorBackground);
 }
+
+
+
 
 /* mobile */
 

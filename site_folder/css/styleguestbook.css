@@ -80,7 +80,8 @@ h3 {
 
 a {
 	font-weight: bold;
-	color: var(--colorSecondary)
+	color: var(--colorSecondary);
+	text-shadow: var(--colorBackground);
 }
 
 

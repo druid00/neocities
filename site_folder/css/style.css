@@ -14,10 +14,10 @@
 	/* accent colours */
 	--colorPrimary: #d4a366;
 	--colorSecondary: #696e64;
-	--colorTertiary: #8f5e5f;
+	--colorTertiary: #8f685e;
 
 	/* border and box shadow colours */ 
-	--colorBorder: #936639; /*var(--colorPrimary);*/
+	--colorBorder:/* #936639;*/ var(--colorTertiary);
 	--colorShadow: var(--colorPrimary);
 
 	/* fonts */
@@ -111,18 +111,20 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	color: var(--colorPrimary);
 	font-family: var(--fontHeader);
-	letter-spacing: 0.05em;
+	letter-spacing: 0.15em;
 	text-transform: lowercase;
 	font-weight: bold;
 
 	font-style: italic; 
 	margin: 2em 0 0 0;
 	padding: 3px;
-	box-shadow: 2px 2px var(--colorSecondary);
-
+	
+	/*box-shadow: 2px 2px var(--colorSecondary);
 	background-image: var(--imageFrame);
 	background-size: 250px;
-	text-shadow: 1px 1px var(--colorBackground);
+	text-shadow: 1px 1px var(--colorBackground);*/
+
+	text-decoration: underline;
 }
 
 h1 {font-size: 200%;}
@@ -244,15 +246,22 @@ div.content {
 
 
 
+
+.content ul  {
+	padding-left: 2em;
+}
+
+
 /* content */
 
-.content p {
-	/*font-size: 1.1em;*/
+.content {
+	font-size: 1.1em;
 }
 
 .content b, .buttons b {
 	color: var(--colorPrimary);
 }
+
 
 .content a {
 	color: var(--colorSecondary);
