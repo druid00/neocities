@@ -1,4 +1,4 @@
-NEOCITIES_API_TOKENname: Deploy to Neocities
+name: Deploy to Neocities
 
 on: push # triggers every time you run "git push"
   
