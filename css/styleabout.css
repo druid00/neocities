@@ -59,7 +59,7 @@ body {
 
 	color: var(--colorText);
 	font-family: var(--fontText);
-	line-height: 1.5em;
+	line-height: 1.75em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -129,6 +129,9 @@ b {
 
 .interests b {
 	text-transform: uppercase;
+	background-color: var(--colorSecondary);
+	color: var(--colorBackground);
+	padding: 0 5px;
 }
 
 .page {
@@ -183,6 +186,7 @@ a.home:hover {
 		margin-top: 0.25em;
 	}
 	.page {
+		padding: 1.5em;
 		padding-top: 6.5em;
 		margin-left:  0;
 		margin-right: 0;

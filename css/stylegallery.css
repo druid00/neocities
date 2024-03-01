@@ -98,7 +98,7 @@ a {
 	transition: 0.5s;
 }
 a::after {
-	content: "🔗";
+	content: "⤴";
 	display: inline-block;
 	font-size: .75em;
 }
@@ -168,7 +168,7 @@ img.png:hover {
 .gallery img:hover {
 	filter: brightness(1.2);
 	border-color: var(--colorTertiary);
-	box-shadow: 4px 4px var(--colorTertiary);
+	box-shadow: 6px 6px var(--colorTertiary);
 }
 
 

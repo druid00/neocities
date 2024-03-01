@@ -115,10 +115,10 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: lowercase;
 	font-weight: bold;
 
-	border-bottom: var(--borderHeading);
-	border-color: var(--colorBorder);
 	font-style: italic; 
 	margin: 2em 0 0 0;
+	padding: 3px;
+	box-shadow: 2px 2px var(--colorSecondary);
 
 	background-image: var(--imageFrame);
 	background-size: 250px;
@@ -229,6 +229,7 @@ div.content {
 	padding: 0.15em 0 0 0;
 	
 	background-image: none;
+	box-shadow: none;
 }
 
 .sidebar p {
@@ -249,7 +250,7 @@ div.content {
 	/*font-size: 1.1em;*/
 }
 
-.content p b {
+.content b, .buttons b {
 	color: var(--colorPrimary);
 }
 
@@ -291,18 +292,6 @@ hr {
 	
 }
 
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
-	/*background-color: #e5e5f7;
-	opacity: 0.8;
-	background-size: 10px 10px;
-	background-image: repeating-linear-gradient(45deg, var(--colorBorder) 0, var(--colorBorder) 1px, var(--colorBackground) 0,var(--colorBackground) 50%);*/
-}
-
 .buttons {
 	margin: 2em 0;
 	line-height: 1.75em;
@@ -326,7 +315,7 @@ hr {
 .content img:hover, .buttons img:hover {
 	filter: brightness(1.2);
 	border-color: var(--colorSecondary);
-	box-shadow: 2px 2px var(--colorSecondary);
+	box-shadow: 4px 4px var(--colorSecondary);
 }
 
 

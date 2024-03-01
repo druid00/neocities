@@ -1,0 +1,106 @@
+/* v1.1
+
+/* root settings */
+
+:root {
+	/* column widths */
+	--widthSidebar: 275px;
+	--widthContent: 650px;
+
+	/* general page and text colours */
+	--colorBackground: #1F140D;
+	--colorText: #CEAC85;
+
+	/* accent colours */
+	--colorPrimary: #7F6037;
+	--colorSecondary: #522B17;
+	--colorTertiary: #36260F;
+
+	/* border and box shadow colours */ 
+	--colorBorder: #5E4B3C; /*var(--colorPrimary);*/
+	--colorShadow: var(--colorPrimary);
+
+	/* fonts */
+	--fontTitle: "Quattrocento", serif;
+	--fontText: "Arsenal", serif;
+
+	/* borders */
+	--borderSolid: 1px solid var(--colorBorder);
+	--borderDotted: 1px dotted var(--colorBorder);
+	--borderTree: 1px solid var(--colorBorder);
+	--borderHeading: 1px solid var(--colorBorder);
+
+	/* gallery settings */
+	--columnCount: 2;
+	--columnGap: 16px;
+
+	--sidebarGap: 20px;
+
+	/* background image FOR ALL PAGES */
+	--imageBackground: url(../img/art/brook.jpg);
+	--imageFrame: url(../img/frame.png);
+}
+
+
+/* global site structure */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--colorBackground);
+	background-image: var(--imageBackground);
+	background-size: cover;
+	background-attachment: fixed;
+
+	color: var(--colorText);
+	font-family: var(--fontText);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	background-color: var(--colorPrimary);
+	color: var(--colorBackground);
+	padding: 1em;
+}
+
+
+a {
+	font-weight: bold;
+}
+
+a::after {
+	content: "⤴";
+	content: "\2924";
+	display: inline-block;
+}
+
+.page {
+	background-color: var(--colorBackground);
+	max-width: var(--widthContent);
+	padding: 1em;
+	margin-top: 15em;
+}
+
+
+/* html boxes */
+
+#hcb_form_website, #hcb_form_name, #hcb_form_content {
+	font-family: "montserrat";
+	font-size: 14px;
+	padding: 8px;
+	margin: 0;
+
+	background-color: var(--colorBackground);
+	border: 1px solid var(--colorPrimary);
+	border-radius: 3px;
+	color: var(--colorBorder);
+	
+	resize: vertical;
+}
+
+/* mobile */
+
+@media screen and (max-width: 650px) {
+	
+}
