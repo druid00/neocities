@@ -94,7 +94,7 @@ a::after {
 	max-width: var(--widthContent);
 	padding: 1em;
 	margin-top: 15em;
-	margin-left: 100px;
+	margin-left: 10%;
 }
 
 #HCB_comment_box {
@@ -121,6 +121,30 @@ a::after {
 	content: none;
 } 
 
+
+
+.home {
+	color: var(--colorText);
+	text-decoration: none;
+	line-height: normal;
+	text-align: right;
+}
+
+.home a {
+	color: var(--colorText);
+	text-decoration: none;
+	line-height: normal;
+	text-align: right;
+	transition: .25s;
+}
+
+.home a:hover {
+	color: var(--colorBorder)
+}
+
+.home a::after {
+	content: none;
+}
 
 
 /* mobile */
