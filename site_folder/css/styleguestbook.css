@@ -84,7 +84,6 @@ a {
 	text-shadow: var(--colorBackground);
 }
 
-
 a::after {
 	content: "⤴";
 	content: "\2924";
@@ -121,7 +120,6 @@ a::after {
 .admin-link a::after {
 	content: none;
 } 
-
 
 
 .home {
