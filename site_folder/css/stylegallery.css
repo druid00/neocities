@@ -85,7 +85,6 @@ h1 {
 	float:right;
 	font-size: 600%;
 	margin-top: .5em;
-	transition: 0.5s;
 	text-decoration: none;
 }
 a.home::after {
@@ -95,7 +94,6 @@ a.home::after {
 a {
 	color: var(--colorSecondary);
 	font-weight: bold;
-	transition: 0.5s;
 }
 a::after {
 	content: "⤴";
@@ -162,7 +160,7 @@ img.png:hover {
 	width: 100% !important;
 	height: auto !important;
 	margin-bottom: var(--columnGap);
-	transition: all 0.75s;
+	transition: all 0.5s;
 }
 
 .gallery img:hover {

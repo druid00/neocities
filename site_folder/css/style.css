@@ -13,8 +13,8 @@
 
 	/* accent colours */
 	--colorPrimary: #d4a366;
-	--colorSecondary: #696e64;
-	--colorTertiary: #8f685e;
+	--colorSecondary: #7a7e75;
+	--colorTertiary: #465f5f;
 
 	/* border and box shadow colours */ 
 	--colorBorder:/* #936639;*/ var(--colorTertiary);
@@ -161,7 +161,7 @@ h1 {font-size: 200%;}
 	font-style: italic; 
 	font-weight: bold;
 	
-	transition: color 0.4s;
+	transition: color 0.5s;
 
 	padding: 0;
 	margin-right: 0.5em;
@@ -267,12 +267,10 @@ div.content {
 	color: var(--colorSecondary);
 	font-weight: bold;
 	text-shadow: 1px 1px var(--colorBackground);
-	
-	transition: 0.75s;
 }
 
 .content a:hover {
-	color: var(--colorText);
+	color: var(--colorTertiary);
 }
 
 .content a::after {
@@ -317,7 +315,11 @@ hr {
 	box-shadow: 2px 2px var(--colorBorder);
 	border: var(--borderSolid);
 	border-radius: 5px;
-	transition: all 0.75s;
+	transition: all 0.5s;
+}
+
+.content img {
+	box-shadow: 3px 3px var(--colorBorder);
 }
 
 

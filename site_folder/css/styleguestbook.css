@@ -134,7 +134,6 @@ a::after {
 	text-decoration: none;
 	line-height: normal;
 	text-align: right;
-	transition: .25s;
 }
 
 .home a:hover {
