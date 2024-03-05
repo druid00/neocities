@@ -4,7 +4,7 @@
 
 :root {
 	/* column widths */
-	--widthSidebar: 275px;
+	--widthSidebar: 280px;
 	--widthContent: 800px;
 
 	/* general page and text colours */
@@ -12,9 +12,9 @@
 	--colorText: #e1d3c0;
 
 	/* accent colours */
-	--colorPrimary: #d4a366;
-	--colorSecondary: #7a7e75;
-	--colorTertiary: #465f5f;
+	--colorPrimary: #ccac85;
+	--colorSecondary: #b19182;
+	--colorTertiary: #7a7e75;
 
 	/* border and box shadow colours */ 
 	--colorBorder:/* #936639;*/ var(--colorTertiary);
@@ -23,7 +23,7 @@
 	/* fonts */
 	--fontTitle: 'Quintessential', serif;
 	--fontText: 'Arsenal', serif;
-	--fontHeader: 'Quintessential', serif; /*'Bigshot One', serif;*/
+	--fontHeader: 'Chonburi', serif; /*'Bigshot One', serif;*/
 
 	/* borders */
 	--borderSolid: 1px solid var(--colorBorder);
@@ -93,7 +93,6 @@
 
 * {
 	box-sizing: border-box;
-	
 }
 
 body {
@@ -111,23 +110,20 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	color: var(--colorPrimary);
 	font-family: var(--fontHeader);
-	letter-spacing: 0.15em;
+
 	text-transform: lowercase;
 	font-weight: bold;
-
 	font-style: italic; 
-	margin: 2em 0 0 0;
-	padding: 3px;
-	
-	/*box-shadow: 2px 2px var(--colorSecondary);
-	background-image: var(--imageFrame);
-	background-size: 250px;
-	text-shadow: 1px 1px var(--colorBackground);*/
 
-	text-decoration: underline;
+	letter-spacing: 0em;
+	margin: 2.5em 0 0 0;
+	padding: 0px;
+	
 }
 
-h1 {font-size: 200%;}
+h1 {
+	font-size: 200%;
+}
 
 
 /* sidebar */ 
@@ -138,14 +134,15 @@ h1 {font-size: 200%;}
 	padding: 0 var(--sidebarGap) 0 0;
 	width: var(--widthSidebar);
 	position: fixed;
-	height: 90%;
+	height: 100%;
 	overflow: auto;
     text-align: center;
-	border-right: var(--borderSolid);
+
+	scrollbar-width: thin; 
 }
 
 .sidebar #menu {
-	margin: 1.5em 0;
+	margin: 2em 0;
 }
   
 .sidebar #menu a, .sidebar #menu summary {
@@ -205,6 +202,13 @@ h1 {font-size: 200%;}
 	text-decoration: none;
 }
 
+.logo {
+	margin-top: 4em;
+}
+
+
+
+
 div.content img {
 	max-height:100%; max-width:100%;
 }
@@ -216,15 +220,16 @@ div.content {
 
 	max-width: var(--widthContent);
 	margin-bottom: 20em;
+	padding-top: 1px;
 }
 
 
-.sidebar h1.logo {
+.sidebar h1.name {
 	color: var(--colorText);
 	font-family: var(--fontTitle);
-	letter-spacing: 0.05em;
-	font-weight: normal;
-	font-size: 325%;
+	letter-spacing: -0.06em;
+	font-weight: bold;
+	font-size: 450%;
 	border: none;
 	font-style: italic;
 	margin: 0 0 0.3em 0; 
@@ -249,6 +254,7 @@ div.content {
 
 .content ul  {
 	padding-left: 2em;
+	list-style-type: circle;
 }
 
 
@@ -256,6 +262,7 @@ div.content {
 
 .content {
 	font-size: 1.1em;
+	line-height: 1.5em;
 }
 
 .content b, .buttons b {
@@ -264,19 +271,20 @@ div.content {
 
 
 .content a {
-	color: var(--colorSecondary);
+	color: var(--colorTertiary);
 	font-weight: bold;
 	text-shadow: 1px 1px var(--colorBackground);
+
+	text-decoration: underline wavy;
 }
 
 .content a:hover {
-	color: var(--colorTertiary);
+	color: var(--colorSecondary);
 }
 
 .content a::after {
-	content: "🔗";
+	content: "\2924";
 	display: inline-block;
-	font-size: .75em;
 }
 
 hr {
@@ -292,7 +300,7 @@ hr {
 .content h4::after,
 .content h5::after,
 .content h6::after {
-	content: " ⚔";
+	content: "⚔";
 	margin-left: .25em;
 	display: inline-block;
 	font-size: .75em;
@@ -412,5 +420,9 @@ details[open] summary {
 		/* gallery settings */
 		--columnCount: 1;
 		--columnGap: 8px;
+	}
+
+	.logo {
+		margin-right: 1.25em;
 	}
 }
