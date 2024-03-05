@@ -12,9 +12,9 @@
 	--colorText: #e1d3c0;
 
 	/* accent colours */
-	--colorPrimary: #ccac85;
-	--colorSecondary: #b19182;
-	--colorTertiary: #7a7e75;
+	--colorPrimary: #d5a66c;
+	--colorSecondary: #a56949;
+	--colorTertiary: #746a3b;
 
 	/* border and box shadow colours */ 
 	--colorBorder:/* #936639;*/ var(--colorTertiary);
@@ -38,54 +38,11 @@
 	--sidebarGap: 20px;
 
 	/* background image FOR ALL PAGES */
-	--imageBackground: url("../img/art/moonlit.jpg");
+	--imageBackground: url("../img/art/moonlit2.jpg");
 	--imageFrame: url("../img/frame.png");
 
 
 	--duration: 3s;
-}
-
-/* title font - w95fa */
-@font-face {
-  font-family: 'w95fa';
-  src: url('../fonts/w95fa/w95fa.woff') format('woff'),
-  		 url('../fonts/w95fa/w95fa.woff2') format('woff2'),
-       url('../fonts/w95fa/w95fa.otf');
-}
-
-/* body font - DM mono */
-@font-face {
-  font-family: 'DM Mono';
-  font-style: normal;
-  src: url('../fonts/DM Mono/dm-mono-v11-latin-regular.woff') format('woff'),
-  		 url('../fonts/DM Mono/dm-mono-v11-latin-regular.woff2') format('woff2'),
-       url('../fonts/DM Mono/dm-mono-v11-latin-regular.ttf');
-}
-
-@font-face {
-  font-family: 'DM Mono';
-  font-style: italic;
-  src: url('../fonts/DM Mono/dm-mono-v11-latin-italic.woff') format('woff'),
-  		 url('../fonts/DM Mono/dm-mono-v11-latin-italic.woff2') format('woff2'),
-       url('../fonts/DM Mono/dm-mono-v11-latin-italic.ttf');
-}
-
-@font-face {
-  font-family: 'DM Mono';
-  font-style: normal;
-  font-weight: bold;
-  src: url('../fonts/DM Mono/dm-mono-v11-latin-500.woff') format('woff'),
-  		 url('../fonts/DM Mono/dm-mono-v11-latin-500.woff2') format('woff2'),
-       url('../fonts/DM Mono/dm-mono-v11-latin-500.ttf');
-}
-
-@font-face {
-  font-family: 'DM Mono';
-  font-style: italic;
-  font-weight: bold;
-  src: url('../fonts/DM Mono/dm-mono-v11-latin-500.woff') format('woff'),
-  		 url('../fonts/DM Mono/dm-mono-v11-latin-500.woff2') format('woff2'),
-       url('../fonts/DM Mono/dm-mono-v11-latin-500.ttf');
 }
 
 
@@ -185,7 +142,7 @@ h1 {
 }
 
 .sidebar #menu a:hover, .sidebar #menu summary:hover, #menu .tree-view ul:hover {
-	color: var(--colorTertiary);
+	color: var(--colorSecondary);
 }
 
 .sidebar img {
@@ -221,6 +178,8 @@ div.content {
 	max-width: var(--widthContent);
 	margin-bottom: 20em;
 	padding-top: 1px;
+
+	text-shadow: 1px 1px var(--colorBackground);
 }
 
 
