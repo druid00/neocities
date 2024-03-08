@@ -13,8 +13,8 @@
 
 	/* accent colours */
 	--colorPrimary: #d5a66c;
-	--colorSecondary: #a56949;
-	--colorTertiary: #746a3b;
+	--colorSecondary: #c48360;
+	--colorTertiary: #7a6e39;
 
 	/* border and box shadow colours */ 
 	--colorBorder:/* #936639;*/ var(--colorTertiary);
