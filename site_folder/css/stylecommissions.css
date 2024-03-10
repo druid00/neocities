@@ -4,40 +4,27 @@
 
 :root {
 	/* column widths */
-	--widthSidebar: 275px;
-	--widthContent: 900px;
+	--widthContent: 880px;
 
 	/* general page and text colours */
 	--colorBackground: #1e1f1e;
 	--colorText: #c1ccc8;
 
 	/* accent colours */
-	--colorPrimary: #5f739e ;
+	--colorPrimary: #829acd ;
 	--colorSecondary: #878476;
-	--colorTertiary: #8787b1;
-
-	/* border and box shadow colours */ 
-	--colorBorder: #dbb281; /*var(--colorPrimary);*/
-	--colorShadow: var(--colorPrimary);
+	--colorTertiary: #89aaa3;
 
 	/* fonts */
 	--fontTitle: "Chonburi", serif;
-	--fontText: 'El Messiri', serif;
-
-	/* gallery settings */
-	--columnCount: 2;
-	--columnGap: 16px;
-
-	--sidebarGap: 20px;
+	--fontText: 'Overpass', serif;
 
 	/* background image FOR ALL PAGES */
 	--imageBackground: url(../img/art/tempest.png);
 	--imageFrame: url(../img/frame.png);
 
-	--borderSolid: 1px solid var(--colorPrimary);
+	--borderSolid: 1px dashed var(--colorSecondary);
 	--borderDotted: 1px dotted var(--colorPrimary);
-
-	--duration: 3s;
 }
 
 
@@ -67,43 +54,43 @@ a {
 	color: var(--colorPrimary);
 	font-weight: bold;
 	text-decoration: underline wavy;
+
+	transition: all .25s;
 }
 
 a:hover {
-	color: var(--colorSecondary);
+	color: var(--colorTertiary);
 }
 
 a::after {
 	content:"\2924";
 }
 
-img {
+img.head {
 	max-width: 100%;
-	border-radius: 40px;
-	transition: filter 1s
+	transition: all 1s;
+	margin: 0;
 }
 
-img:hover {
+img.head:hover {
 	filter:brightness(120%);
+	transform: scale(1.025);
 }
 
 
 
 .page {
 	max-width: var(--widthContent);
-	padding: 2em 2em;
-	margin: 5em auto;
 
 	background-color: var(--colorBackground);
-	background-color: #1f201fe0;
-
-	border-right: var(--borderSolid);
-	border-left: var(--borderSolid);
-
-	line-height: 1.35em;
-	font-size: 1.3em;
+	line-height: 1.4em;
+	font-size: 1.1em;
 
 	border-radius: 0;
+
+	margin-inline: auto;
+	margin-block: 3em;
+	padding: 2em;
 }
 
 
@@ -239,15 +226,19 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 500%;
-	line-height: 0.57em;
+	line-height: .6em;
 	letter-spacing: -.07em;
 
-	text-align: center;
 	font-style: italic;
+	text-align: center;
 	text-shadow: 10px 0px var(--colorBackground);
 
-	margin-bottom: 0.3em;
-	margin-top: .3em;
+	margin-block: .2em;
+	
+	/*text-shadow: -2px 2px 0 var(--colorBackground),
+				  2px 2px 0 var(--colorBackground),
+				  2px -2px 0 var(--colorBackground),
+				 -2px -2px 0 var(--colorBackground);*/
 }
 
 
@@ -287,7 +278,8 @@ nav ul li {
 
 nav ul li a {
 	margin: 0 0.2em;
-	padding: 0 0.7em;
+	padding-inline: 0.7em;
+	padding-block: 0.2em;
 	
 	text-decoration: none;
 
@@ -303,7 +295,7 @@ nav ul li a::after {
 }
 
 nav ul li a:hover {
-	background-color: var(--colorPrimary);
+	background-color: var(--colorTertiary);
 	color: var(--colorBackground);
 }
 
@@ -329,12 +321,13 @@ ul#contact li a {
 	color: var(--colorPrimary);
 
 	background-color: var(--colorBackground);
-	padding: 0 .4em;
+	padding-inline: .4em;
+	padding-block: .2em;
 }
 
 ul#contact li a:hover {
 	color: var(--colorBackground);
-	background-color: var(--colorPrimary);
+	background-color: var(--colorTertiary);
 }
 
 ul#contact li a::after {

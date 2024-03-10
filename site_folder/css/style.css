@@ -178,8 +178,6 @@ div.content {
 	max-width: var(--widthContent);
 	margin-bottom: 20em;
 	padding-top: 1px;
-
-	text-shadow: 1px 1px var(--colorBackground);
 }
 
 
@@ -221,7 +219,7 @@ div.content {
 
 .content {
 	font-size: 1.1em;
-	line-height: 1.5em;
+	line-height: 1.4em;
 }
 
 .content b, .buttons b {
@@ -235,6 +233,8 @@ div.content {
 	text-shadow: 1px 1px var(--colorBackground);
 
 	text-decoration: underline wavy;
+
+	transition: all .25s;
 }
 
 .content a:hover {
@@ -290,10 +290,21 @@ hr {
 }
 
 
-.content img:hover, .buttons img:hover {
+.content img:hover {
 	filter: brightness(1.2);
 	border-color: var(--colorSecondary);
-	box-shadow: 4px 4px var(--colorSecondary);
+	box-shadow: 0 0 0 2px var(--colorSecondary);
+
+	transform: scale(.98);
+}
+
+
+.buttons img:hover {
+	filter: brightness(1.2);
+	border-color: var(--colorSecondary);
+	box-shadow: 0 0 0 1px var(--colorSecondary);
+
+	transform: scale(.95);
 }
 
 
@@ -336,6 +347,118 @@ details[open] summary {
 	text-decoration-thickness: 1px;
 	text-decoration-color: var(--colorBorder);
 }
+
+/* links */
+
+
+
+.head {
+	font-family: var(--fontTitle);
+	color: var(--colorPrimary);
+	text-transform: lowercase;
+	text-decoration: underline;
+	font-weight: normal;
+	font-style: italic;
+	margin: 0;
+	padding: 0;
+}
+
+.links li {
+	margin: 3px 0;
+}
+
+.links li a {
+	padding: 0 5px 2px;
+
+	color: var(--colorBackground);
+	background-color: var(--colorTertiary);
+	text-shadow: none;
+
+	/*animation-name: pulse;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;*/
+}
+
+.links li a.crown {
+	color: var(--colorBackground);
+	background-color: var(--colorPrimary);
+}
+
+.links li a:hover {
+	color:var(--fontText);
+	background-color: var(--colorSecondary);
+}
+
+
+/*@keyframes pulse {
+	0%   {transform: scale(1);}
+	50%  {transform: scale(1.5);}
+	100% {transform: scale(1);}
+}*/
+
+.currently#support ul li {
+	padding: 0;
+}
+
+.currently#support ul {
+	margin-left: .7em;
+	list-style-type: circle;
+	margin-bottom: 0;
+}
+
+
+.currently#support p {
+	color: var(--colorTertiary)
+}
+
+
+
+
+/* currently */
+
+.currently {
+	padding: 0.5em 1em;
+	margin: 0 1em;
+
+	border: var(--borderSolid);
+	font-size: 80%;
+	line-height: 1.4em;
+}
+
+.currently p {
+	margin: 0;
+	padding: 0;
+	transform: translate(-6px, -6px);
+
+	color:var(--colorSecondary);
+	font-size: 200%;
+	line-height: .9em;
+
+	font-family: var(--fontTitle);
+	text-transform: lowercase;
+	font-style: italic;
+	text-decoration: underline;
+
+}
+
+.currently b {
+	background-color: var(--colorSecondary);
+	color: var(--colorBackground);
+	padding: 0 3px;
+	margin-right: 0.2em;
+}
+
+.currently ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.currently ul li {
+	padding: 0.1em 0;
+}
+
+
 
 /* mobile */
 

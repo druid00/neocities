@@ -21,9 +21,8 @@
 	--colorShadow: var(--colorPrimary);
 
 	/* fonts */
-	--fontTitle: "Bigshot One", serif;
 	--fontText: 'El Messiri', serif;
-	--fontHeader: 'Bigshot One', serif; /*'Bigshot One', serif;*/
+	--fontTitle: 'Bigshot One', serif; /*'Bigshot One', serif;*/
 
 	/* borders */
 	--borderSolid: 1px solid var(--colorBorder);
@@ -64,7 +63,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: var(--colorPrimary);
-	font-family: var(--fontHeader);
+	font-family: var(--fontTitle);
 	font-weight: bold;
 	letter-spacing: 0.05em;
 	text-transform: lowercase;
@@ -94,6 +93,7 @@ a.home::after {
 a {
 	color: var(--colorSecondary);
 	font-weight: bold;
+	transition: all .5s;
 }
 a::after {
 	content: "⤴";
@@ -102,6 +102,9 @@ a::after {
 }
 a:hover{
 	color: var(--colorTertiary);
+}
+a.home:hover{
+	transform: scale(1.1);
 }
 
 
@@ -122,22 +125,6 @@ h6::after {
 	margin-left: .25em;
 	display: inline-block;
 	font-size: .75em;
-}
-
-img {
-	box-shadow: 4px 4px var(--colorBorder);
-	border: var(--borderSolid);
-	border-radius: 5px;
-}
-
-img.png {
-	box-shadow: none;
-	border: none;
-}
-
-img.png:hover {
-	box-shadow: none;
-	border: none;
 }
 
 
@@ -163,10 +150,28 @@ img.png:hover {
 	transition: all 0.5s;
 }
 
+img {
+	box-shadow: 4px 4px var(--colorBorder);
+	border: var(--borderSolid);
+	border-radius: 5px;
+}
+
+img.png {
+	box-shadow: none;
+	border: none;
+}
+
+img.png:hover {
+	box-shadow: none;
+	border: none;
+}
+
 .gallery img:hover {
 	filter: brightness(1.2);
 	border-color: var(--colorTertiary);
-	box-shadow: 6px 6px var(--colorTertiary);
+	box-shadow: 0 0 0 2px var(--colorTertiary);
+
+	transform: scale(.98);
 }
 
 
