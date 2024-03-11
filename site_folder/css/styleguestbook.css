@@ -9,12 +9,12 @@
 
 	/* general page and text colours */
 	--colorBackground: #1F140D;
-	--colorText: #CEAC85;
+	--colorText: #d7b48c;
 
 	/* accent colours */
-	--colorPrimary: #7F6037;
-	--colorSecondary: #522B17;
-	--colorTertiary: #36260F;
+	--colorPrimary: #5E4B3C;
+	--colorSecondary: #5E4B3C;
+	--colorTertiary: #c5a178;
 
 	/* border and box shadow colours */ 
 	--colorBorder: #5E4B3C; /*var(--colorPrimary);*/
@@ -22,23 +22,10 @@
 
 	/* fonts */
 	--fontTitle: "Gloock", serif;
-	--fontText: "Arsenal", serif;
-
-	/* borders */
-	--borderSolid: 1px solid var(--colorBorder);
-	--borderDotted: 1px dotted var(--colorBorder);
-	--borderTree: 1px solid var(--colorBorder);
-	--borderHeading: 1px solid var(--colorBorder);
-
-	/* gallery settings */
-	--columnCount: 2;
-	--columnGap: 16px;
-
-	--sidebarGap: 20px;
+	--fontText: "Montserrat", serif;
 
 	/* background image FOR ALL PAGES */
 	--imageBackground: url(../img/art/brook.jpg);
-	--imageFrame: url(../img/frame.png);
 }
 
 
@@ -78,18 +65,6 @@ h3 {
 	font-size: 30px;
 }
 
-a {
-	font-weight: bold;
-	color: var(--colorSecondary);
-	text-shadow: var(--colorBackground);
-}
-
-a::after {
-	content: "⤴";
-	content: "\2924";
-	display: inline-block;
-}
-
 .page {
 	max-width: var(--widthContent);
 	padding: 1em;
@@ -109,7 +84,7 @@ a::after {
 	padding: 8px;
 	margin: 0;
 
-	background-color: #c5a178;
+	background-color: var(--colorTertiary);
 	border: 1px solid var(--colorPrimary);
 	border-radius: 3px;
 	color: var(--colorBorder);
@@ -122,15 +97,28 @@ a::after {
 } 
 
 
-.home {
+/* home button */
+
+a {
+	font-weight: bold;
 	color: var(--colorText);
+}
+
+a::after {
+	content: "⤴";
+	content: "\2924";
+	display: inline-block;
+}
+
+.home {
 	text-decoration: none;
 	line-height: normal;
 	text-align: right;
+
+	transform: translateY(70px);
 }
 
 .home a {
-	color: var(--colorText);
 	text-decoration: none;
 	line-height: normal;
 	text-align: right;
@@ -143,6 +131,7 @@ a::after {
 .home a::after {
 	content: none;
 }
+
 
 
 /* mobile */
@@ -158,5 +147,9 @@ a::after {
 	h1 {
 		font-size: 50px;
 		line-height: 25px;
+	}
+
+	.home {
+		transform: translateY(40px);
 	}
 }

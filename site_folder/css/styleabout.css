@@ -93,7 +93,7 @@ h1 {
 }
 
 p, li {
-	font-size: 120%;
+	font-size: 125%;
 	margin-left: 1em;
 }
 
@@ -138,6 +138,7 @@ b {
 	background-color: var(--colorBackground);
 	max-width: var(--widthContent);
 	padding: 3em;
+	padding-inline: 4em;
 	padding-top: 8em;
 
 	background-image: var(--imageFrame);
