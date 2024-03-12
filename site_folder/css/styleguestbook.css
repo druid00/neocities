@@ -8,17 +8,9 @@
 	--widthContent: 650px;
 
 	/* general page and text colours */
-	--colorBackground: #1F140D;
-	--colorText: #d7b48c;
-
-	/* accent colours */
+	--colorBackground: #ddbb94;
 	--colorPrimary: #5E4B3C;
-	--colorSecondary: #5E4B3C;
-	--colorTertiary: #c5a178;
-
-	/* border and box shadow colours */ 
-	--colorBorder: #5E4B3C; /*var(--colorPrimary);*/
-	--colorShadow: var(--colorPrimary);
+	--colorSecondary: #d2ae82;
 
 	/* fonts */
 	--fontTitle: "Gloock", serif;
@@ -36,24 +28,23 @@
 }
 
 body {
-	background-color: var(--colorBackground);
 	background-image: var(--imageBackground);
 	background-size: cover;
 	background-attachment: fixed;
 
-	color: var(--colorSecondary);
+	color: var(--colorPrimary);
 	font-family: var(--fontText);
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: var(--colorBorder);
+	color: var(--colorPrimary);
 	font-family: var(--fontText);
 	margin-bottom: 0;
 }
 
 h1 {
 	font-family: var(--fontTitle);
-	color: var(--colorText);
+	color: var(--colorBackground);
 	font-weight: normal;
 	font-size: 100px;
 	line-height: 55px;
@@ -74,7 +65,7 @@ h3 {
 
 #HCB_comment_box {
 	padding: 2em;
-	background-color: var(--colorText);
+	background-color: var(--colorBackground);
 }
 
 /* boxes */
@@ -84,10 +75,10 @@ h3 {
 	padding: 8px;
 	margin: 0;
 
-	background-color: var(--colorTertiary);
+	background-color: var(--colorSecondary);
 	border: 1px solid var(--colorPrimary);
 	border-radius: 3px;
-	color: var(--colorBorder);
+	color: var(--colorPrimary);
 	
 	resize: vertical;
 }
@@ -101,7 +92,7 @@ h3 {
 
 a {
 	font-weight: bold;
-	color: var(--colorText);
+	color: var(--colorPrimary);
 }
 
 a::after {
@@ -122,15 +113,19 @@ a::after {
 	text-decoration: none;
 	line-height: normal;
 	text-align: right;
+	color: var(--colorBackground);
 }
 
 .home a:hover {
-	color: var(--colorBorder)
+	color: var(--colorPrimary)
 }
 
 .home a::after {
 	content: none;
 }
+
+
+
 
 
 
