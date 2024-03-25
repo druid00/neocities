@@ -90,8 +90,7 @@ h1 {
 	margin: 0;
 	padding: 0 var(--sidebarGap) 0 0;
 	width: var(--widthSidebar);
-	position: fixed;
-	height: 100%;
+	position: absolute;
 	overflow: auto;
     text-align: center;
 
@@ -222,7 +221,7 @@ div.content {
 	line-height: 1.4em;
 }
 
-.content b, .buttons b {
+.content b {
 	color: var(--colorPrimary);
 }
 
@@ -266,52 +265,55 @@ hr {
 	
 }
 
-.buttons {
-	margin: 2em 0;
-	line-height: 1.75em;
-	letter-spacing: 0.25em;
+.widgets {
+	margin-block: 2em;
+}
+.widgets p {
+	text-align: center;
+}
+.widgets b {
+	color: var(--colorPrimary);
 }
 
-.buttons p {
-	text-align: center;
-	line-height: normal;
-	letter-spacing: normal;
+.buttons {
+	/* margin: 2em 0; */
+	line-height: 1.45em;
+	letter-spacing: 0.15em;
 }
 
 .content img, .buttons img {
-	box-shadow: 3px 3px var(--colorBorder);
+	box-shadow: 4px 4px var(--colorBorder);
 	border: var(--borderSolid);
-	border-radius: 5px;
 	transition: all 0.5s;
 }
 
 .buttons img {
-	box-shadow: 2px 2px var(--colorBorder);
+	box-shadow: 1px 1px var(--colorBorder);
 }
 
 
 .content img:hover {
-	filter: brightness(1.2);
+	filter: brightness(1.3);
 	border-color: var(--colorSecondary);
 	box-shadow: none;
-
-	transform: scale(.98);
 }
 
 
 .buttons img:hover {
-	filter: brightness(1.2);
+	filter: brightness(1.4);
 	border-color: var(--colorSecondary);
 	box-shadow: none;
-
-	transform: scale(.95);
 }
 
 
 .buttons_holder {
+	margin-block: 1em;
 	border: var(--borderSolid);
 	padding: .5em;
+	padding-block: .7em;
 	text-align: center;
+
+	max-width: 700px;
 }
 
 
@@ -538,7 +540,7 @@ details[open] summary {
 		--columnGap: 8px;
 	}
 
-	.logo {
-		margin-right: 1.25em;
+	.logo h1, .logo p {
+		text-align: center;
 	}
 }

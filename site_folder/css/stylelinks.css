@@ -1,0 +1,139 @@
+/* v1.1
+
+/* root settings */
+
+:root {
+	/* column widths */
+	--widthContent: 600px;
+
+	/* general page and text colours */
+	--colorBackground: #1e2229;
+	--colorText: #d1ceb7;
+
+	/* accent colours */
+	--colorPrimary: #c2975a;
+	--colorSecondary: #867b4e;
+	--colorTertiary: #8f9492;
+
+	/* border and box shadow colours */ 
+	--colorBorder: #dbb281; /*var(--colorPrimary);*/
+	--colorShadow: var(--colorPrimary);
+
+	/* fonts */
+	--fontTitle: "Rakkas", serif;
+	--fontText: 'Rubik', serif;
+
+	/* borders */
+	--borderSolid: 1px solid var(--colorBorder);
+
+	/* background image FOR ALL PAGES */
+	--imageBackground: url(../img/art/goats.jpg);
+
+	--duration: 3s;
+}
+
+
+/* global site structure */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--colorBackground);
+	background-image: var(--imageBackground);
+	background-size: cover;
+	background-attachment: fixed;
+
+	color: var(--colorText);
+	font-family: var(--fontText);
+	line-height: 1.5em;
+
+	text-shadow: 1px 1px var(--colorBackground);
+}
+
+
+.page { 
+	margin: 5em;
+	margin-top: 23em;
+	margin-left: 10%;
+	
+	max-width: var(--widthContent);
+}
+
+a {
+	text-shadow: none;
+}
+
+.links {
+	list-style-type: disc;
+}
+
+.links > li {
+	margin-block: .25em;
+}
+
+.links a {
+	color: var(--colorBackground);
+	font-weight: bold;
+	transition: .25s;
+
+	padding: .15em;
+	padding-inline: .3em;
+}
+
+.links a::after {
+	content: "\2924";
+	display: inline-block;
+}
+
+.links a {
+	background-color: var(--colorSecondary);
+}
+
+.links a.crown {
+	background-color: var(--colorPrimary);
+}
+
+.links a:hover {
+	color: var(--fontText);
+	background-color: var(--colorTertiary);
+}
+
+h1 { 
+	font-family: var(--fontTitle);
+	color: var(--colorPrimary);
+	text-transform: lowercase;
+	font-size: 300%;
+	margin-bottom: .5em;
+
+	text-decoration: underline wavy 2px;
+}
+
+
+.home {
+	color: var(--colorBackground);
+	font-size: 170%;
+	transition: all .25s;
+	background-color: var(--colorPrimary);
+	border-radius: 100px;
+	padding: .2em;
+	padding-block: .15em;
+
+	float: right;
+}
+
+.home:hover {
+	color: var(--colorText);
+	background-color: var(--colorTertiary);
+}
+
+
+
+/* mobile */
+
+@media screen and (max-width: 750px) {
+	.page {
+		margin-inline: 1em;
+	}
+}

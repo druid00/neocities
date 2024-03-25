@@ -94,7 +94,7 @@ h1 {
 
 p, li {
 	font-size: 125%;
-	margin-left: 1em;
+	margin-left: .5em;
 }
 
 .watchlist ul {
@@ -157,13 +157,15 @@ a.home::after {
 	float: right;
 	color: var(--colorTertiary);
 
-	margin-top: 0.6em;
+	margin-top: .20em;
 	margin-right: 1.5em;
 
 	background-color: var(--colorBackground);
 	border-radius: 50em;
-	padding: 0.3em 0.5em 0.1em;
+	padding: 0.15em 0.2em;
+	padding-bottom: 0;
 	line-height: 1em;
+	font-size: 160%;
 	text-decoration: none;
 }
 
@@ -174,10 +176,19 @@ a.home:hover {
 
 
 
+img {
+	max-width: 350px;
+	border: 3px double var(--colorSecondary);
+	margin-inline: 1em;
+	
+}
+
+
+
 
 /* mobile */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
 	.home {
 		display:block;
 		float: none;
