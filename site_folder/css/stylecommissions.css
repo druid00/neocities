@@ -82,6 +82,8 @@ a::after {
 	max-width: 1200px;
 
 	animation: rotateAnimationSmall 15s infinite ease-in-out;
+
+	/* filter: drop-shadow(5px 20px 10em #90dfdeaa); */
 }
 
 .hero img:hover {
