@@ -5,7 +5,7 @@
 :root {
 	--widthContent: 980px;
 
-	--colorBackground: #bcb5a7;
+	--colorBackground: #c6bfb3;
 	--colorText: #0e161c;
 
 	--colorPrimary: #606a43 ;
@@ -136,7 +136,9 @@ section {
 	padding: 3em;
 	padding-block: 1.5em 2em;
 
-	border-radius: 0 0 6em 0;
+	border-radius: 0 0 5em 0em;
+
+	box-shadow: 5px 10px 40px 0 #1a1f2e55;
 	
 }
 
@@ -433,13 +435,14 @@ section hr {
 
 
 #shift1 { 
-	margin-left: 60px;	
-	/* transform: perspective(3000px) rotateY(5deg)  rotateZ(-1deg); */
+	margin-left: 30px;	
+	transform: perspective(3000px) rotateY(3deg)  rotateZ(-.5deg);
 
 }
 
 #shift2 {
-	margin-right: 60px;
+	margin-right: 30px;
+	transform: perspective(3000px) rotateY(-4deg)  rotateZ(.5deg);
 }
 
 
@@ -451,10 +454,12 @@ section hr {
 	
 	#shift1 { 
 		margin-left: 0;	
+		transform: none;
 	}
 
 	#shift2 {
 		margin-right: 0;
+		transform: none;
 	}
 
 	
@@ -467,42 +472,71 @@ section hr {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
 	.page {
 		margin-left:  0;
 		margin-right: 0;
 	}
 
 	section {
-		padding-inline: 2em;
+		padding-inline: 1.5em;
+		border-radius: 0 0 2em 0;
+		margin-block: 0;
 	}
 
 	section::before {
-		width: calc(100% + 4em);
-		margin-left: 1em;
+		width: calc(100% + 3em);
+		margin-left: 1.5em;
 	}
 
-
-	/* nav ul {
-	}
 
 	nav ul li {
 		display: block;
 		text-align: center;
-		margin: .7em 0;
-	} */
+		margin-block: -.1em;
+	}
 
 	nav ul li a {
 		font-size: 80%;
 	}
 
-	
-	.half_row {
-		display: block;
+	table {
+		margin-bottom: 1.5em;
+		font-size: .85em;
+	}
+
+	th, td {
+		padding-block: .1em;
 	}
 
 	
 
+
+	h1 {
+		font-size: 10vw;
+	}
+	h2 {
+		font-size: 7vw;
+	}
+	.status mark {
+		letter-spacing: 0.1em;
+		padding-inline: .3em;
+		font-size: .9em;
+	}
+	ul#contact {
+		font-size: .9em;
+		padding-left: .5em;
+	}
+	ul#contact li {
+		margin-bottom: 0.2em;
+	}
+
+
+
+	
+	.half_row {
+		display: block;
+	}
 	.half_col {
 		flex: 50%;
 		padding: 0 .3em;
