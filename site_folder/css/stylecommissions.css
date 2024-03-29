@@ -549,5 +549,9 @@ section hr {
 		padding: 0;
 	}
 
+	.hero {
+		display: none;
+	}
+
 	
 }
