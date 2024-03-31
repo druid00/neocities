@@ -88,11 +88,12 @@ h3 {
 } 
 
 
-/* home button */
 
 a {
 	font-weight: bold;
 	color: var(--colorPrimary);
+
+	transition: all .2s;
 }
 
 a::after {
@@ -101,26 +102,28 @@ a::after {
 	display: inline-block;
 }
 
+/* home button */
+
 .home {
+	font-size: 250%;
+	float: right;
+	/* position: relative; */
 	text-decoration: none;
 	line-height: normal;
-	text-align: right;
 
-	transform: translateY(70px);
-}
+	/* transform: translateY(70px); */
 
-.home a {
 	text-decoration: none;
 	line-height: normal;
 	text-align: right;
 	color: var(--colorBackground);
-}
+} 
 
-.home a:hover {
+.home:hover {
 	color: var(--colorPrimary)
 }
 
-.home a::after {
+.home::after {
 	content: none;
 }
 
@@ -145,6 +148,8 @@ a::after {
 	}
 
 	.home {
-		transform: translateY(40px);
+		margin-top: -15px;
+		font-size: 200%;
+		/* transform: translateY(-15px); */
 	}
 }
