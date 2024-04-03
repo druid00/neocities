@@ -3,8 +3,7 @@
 /* root settings */
 
 :root {
-	--widthSidebar: 275px;
-	--widthContent: 850px;
+	--widthContent: 900px;
 
 	--colorBackground: #bebbb1;
 	--colorText: #2d3338;
@@ -18,8 +17,6 @@
 	
 	--imageBackground: url(../img/art/coast.png);
 	--imageFrame: url(../img/frame2.png);
-
-	--duration: 3s;
 }
 
 
@@ -40,11 +37,11 @@ body {
 }
 
 b {
-	color: var(--colorPrimary);
+	color: var(--colorSecondary);
 }
 
 i {
-	color: var(--colorPrimary);
+	/* color: var(--colorPrimary); */
 }
 
 a {
@@ -69,7 +66,7 @@ hr {
 	height: 1px;
 	color: var(--colorTertiary);  /* old IE */
 	background-color: var(--colorTertiary);  /* Modern Browsers */
-	margin: 2em 5em;
+	margin: 2em 2em;
 }
 
 
@@ -205,16 +202,78 @@ h1 {
 	top: -2px;
 }
 
+
+
+.img_grid {
+	margin-block: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+.img_grid > img {
+	margin-inline: .25em;
+	margin-block: .25em;
+}
+
+
+
+
+details > summary {
+	font-weight: bold;
+    list-style-type: none;
+	color: var(--colorSecondary);
+}
+
+details > summary::after {
+    content: '⤵';
+	/* font-weight: 400; */
+	margin-left: .25em;
+	color: var(--colorSecondary);
+	/* font-size: 110%;; */
+	/* background-color: var(--colorSecondary); */
+}
+
+details[open] > summary::after {
+    content: '⤴';
+}
+
+details[open] > summary {
+    margin-bottom: 0.5em;
+	
+}
+
+details {
+    border: 1px dashed var(--colorSecondary);
+	border-radius: 0.1em;
+    padding-block: 0.3em;
+	padding-inline: .5em;
+}
+
+details > p {
+	margin-block: 0.5em;
+}
+
+
+
 /* mobile */
+
+@media screen and (max-width: 900px) {
+	.img_grid {
+		/* flex-direction: row; */
+	}
+}
+
 
 @media screen and (max-width: 700px) {
 	.page {
-		border-radius: 0 100px 0 0;
+		border-radius: 0 70px 0 0;
 
-		margin: 1em;
+		margin: .5em;
 		padding: 2em 1em;
-		background-size: 70px;
-		padding-left: 5em;
+		background-size: 50px;
+		padding-left: 4em;
 	}
 	h1 {
 		font-size: 200%;
