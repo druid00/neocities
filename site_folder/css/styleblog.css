@@ -224,6 +224,7 @@ details > summary {
 	font-weight: bold;
     list-style-type: none;
 	color: var(--colorSecondary);
+	cursor: pointer;
 }
 
 details > summary::after {

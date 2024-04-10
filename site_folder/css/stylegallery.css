@@ -17,7 +17,7 @@
 
 	/* fonts */
 	--fontText: 'El Messiri', serif;
-	--fontTitle: 'Abril Fatface', serif; /*'Bigshot One', serif;*/
+	--fontTitle: 'Rakkas', serif; /*'Bigshot One', serif;*/
 
 	/* borders */
 
@@ -57,8 +57,8 @@ h1 {
 	font-style: italic; 
 	margin-block: 0 .4em;
 	
-	font-size: 600%;
-	line-height: 0.6em;
+	font-size: 6vw;
+	line-height: 0.7em;
 	letter-spacing: -0.03em;
 	max-width: 750px;
 
@@ -118,7 +118,7 @@ hr {
 }
 
 img {
-	border: 3px double var(--colorPrimary);
+	border: 1px solid var(--colorPrimary);
 	transition: all .5s;
 }
 
@@ -164,7 +164,7 @@ img.png:hover {
 	
 	background-size: cover;
 	background-attachment: fixed;
-	border: 3px double var(--colorPrimary) ;
+	border: 1px solid var(--colorPrimary);
 	padding: 3em;
 	margin-top: 3em;
 	margin-bottom: 3em;
@@ -173,7 +173,7 @@ img.png:hover {
 
 /* mobile */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 550px) {
 	:root {
 		/* gallery settings */
 		--columnCount: 1;
@@ -181,7 +181,6 @@ img.png:hover {
 
 	h1 {
 		font-size: 300%;
-		line-height: 0.6em;
 	}
 
 	.home {
@@ -193,4 +192,13 @@ img.png:hover {
 	.page {
 		padding: 1.5em;
 	}
+}
+
+
+@media screen and (min-width: 1100px) {
+
+	h1 {
+		font-size: 400%;
+	}
+
 }
