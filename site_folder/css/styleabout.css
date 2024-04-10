@@ -21,9 +21,8 @@
 	--colorShadow: var(--colorPrimary);
 
 	/* fonts */
-	--fontTitle: "Quattrocento", serif;
 	--fontText: 'El Messiri', serif;
-	--fontHeader: 'Quattrocento', serif; /*'Bigshot One', serif;*/
+	--fontHeader: 'Forum', serif;
 
 	/* borders */
 	--borderSolid: 1px solid var(--colorBorder);
@@ -76,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 50px;
 
 	background-color: var(--colorPrimary);
-	border-radius: 1000px 0 1000px 0;
+	border-radius: 50px 0 50px 0;
 	text-shadow: 1px 1px var(--colorBackground);
 }
 
@@ -93,18 +92,13 @@ h1 {
 }
 
 p, li {
-	font-size: 125%;
+	font-size: 115%;
+	line-height: 1.4em;
 	margin-left: .5em;
 }
 
-.watchlist ul {
-	margin-top: 0;
-	padding-top: 0;
-}
-
-.watchlist li {
-	font-style: italic;
-	list-style-type: disclosure-closed;
+.interests p {
+	margin-block: .5em;
 }
 
 a {
@@ -127,25 +121,33 @@ b {
 	color: var(--colorSecondary);
 }
 
-.interests b {
+.interests mark {
 	text-transform: uppercase;
 	background-color: var(--colorSecondary);
 	color: var(--colorBackground);
-	padding: 0 5px;
+	padding-inline: .5em;
+	padding-block: 0;
+	border-radius: 100em;
+	font-size: .85em;
+	font-weight: bold;
+	/* line-height: -10px; */
+
+	position: relative;
+	top: -1px;
 }
 
 .page {
 	background-color: var(--colorBackground);
 	max-width: var(--widthContent);
-	padding: 3em;
-	padding-inline: 4em;
-	padding-top: 8em;
+	padding-inline: 5em;
+	padding-block: 9em 5em;
 
 	background-image: var(--imageFrame);
 	background-repeat: repeat-x;
 	background-size: 500px;
 
-	margin: 5em;
+	margin-block: 5em;
+	margin-left: 7vw;
 }
 
 a.home::after {
@@ -161,9 +163,9 @@ a.home::after {
 	margin-right: 1.5em;
 
 	background-color: var(--colorBackground);
-	border-radius: 50em;
-	padding: 0.15em 0.2em;
-	padding-bottom: 0;
+	border-radius: 500em;
+	padding-inline: 0.18em;
+	padding-block: 0.15em 0;
 	line-height: 1em;
 	font-size: 160%;
 	text-decoration: none;
@@ -178,9 +180,17 @@ a.home:hover {
 
 img {
 	max-width: 350px;
-	border: 3px double var(--colorSecondary);
-	margin-inline: 1em;
-	
+}
+
+#mii {
+	position: relative;
+	max-width: 220px;
+	float: right;
+	transition: all 1.5s;
+}
+
+#mii:hover {
+	transform: scale(.1);
 }
 
 
@@ -188,7 +198,7 @@ img {
 
 /* mobile */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
 	.home {
 		display:block;
 		float: none;
@@ -205,6 +215,15 @@ img {
 		padding-top: 6.5em;
 		margin-left:  0;
 		margin-right: 0;
+	}
+
+	#mii {
+		max-width: 150px;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 110%;
+		letter-spacing: .2em;
 	}
 	
 }

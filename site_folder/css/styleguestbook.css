@@ -77,7 +77,7 @@ h3 {
 
 	background-color: var(--colorSecondary);
 	border: 1px solid var(--colorPrimary);
-	border-radius: 3px;
+	border-radius: .3rem;
 	color: var(--colorPrimary);
 	
 	resize: vertical;

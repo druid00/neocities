@@ -5,7 +5,7 @@
 :root {
 	--widthContent: 900px;
 
-	--colorBackground: #bebbb1;
+	--colorBackground: rgb(194, 189, 171);
 	--colorText: #2d3338;
 
 	--colorPrimary: #5D676E;
@@ -13,7 +13,8 @@
 	--colorTertiary: #918a76;
 
 	--fontTitle: "Chonburi", serif;
-	--fontText: 'Source Sans 3', serif;
+	/* --fontText: 'Source Sans 3', serif; */
+	--fontText: 'EB Garamond', serif;
 	
 	--imageBackground: url(../img/art/coast.png);
 	--imageFrame: url(../img/frame2.png);
@@ -49,7 +50,7 @@ a {
 	text-decoration: none;
 	font-weight: bold;
 
-	text-decoration: underline wavy;
+	text-decoration: underline;
 }
 
 a:hover {
@@ -72,7 +73,7 @@ hr {
 
 
 .page {
-	font-size: 1.15em;
+	font-size: 1.1em;
 	line-height: 1.3em;
 
 	max-width: var(--widthContent);
@@ -80,8 +81,8 @@ hr {
 	background-color: var(--colorBackground);
 
 	margin: 6em 3em;
-	padding: 3em;
-	padding-left: 8em;
+	padding: 4em;
+	padding-left: 9.5em;
 
 	background-image: var(--imageFrame);
 	background-repeat: repeat-y;
@@ -95,11 +96,12 @@ hr {
 	margin: 1.5em auto;
 	max-height:500px; max-width:90%;
 	box-shadow: 5px 5px var(--colorSecondary);
-	transition: box-shadow .5s;
+	transition: all .25s;
 }
 
 .text img:hover {
 	box-shadow: 5px 5px var(--colorTertiary);
+	filter: 
 }
 
 
@@ -115,19 +117,32 @@ hr {
 .date::after {
 	content: "•";
 	margin-left: 0.5em;
-	margin-right: 0.3em;
+	margin-right: 0.4em;
 }
 
 .title_list {
 	margin-bottom: 0.3em;
 }
 
+.title_list > a {
+	font-weight: normal;
+	font-size: 85%;
+	line-height: 0em;
+	letter-spacing: -.025em;
+	/* text-decoration: none; */
+}
+
+.title_list > a::after {
+	content:none;
+}
+
 .hr_list {
-	margin: 1em 0em;
+	margin-block: 1.5em;
+	margin-inline: 0;
 }
 
 .tags_list {
-	margin: 0em 0em;
+	margin: 0em;
 }
 
 .h1_list {
@@ -150,7 +165,7 @@ hr {
 	color: var(--colorBackground);
 	background-color: var(--colorSecondary);
 	border-radius: 1000px;
-	padding: 0 10px;
+	padding: 1px 10px;
 
 	text-decoration: none;
 }
@@ -159,7 +174,7 @@ hr {
 	background-color: var(--colorTertiary);
 }
 .ul_navigation li a::after {
-	content: "↪";
+	content: "\2924";
 	margin-left: 7px;
 }
 
@@ -175,9 +190,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 300%;
-	line-height: 55px;
-	letter-spacing: -0.08em;
+	font-size: 250%;
+	line-height: 3rem;
+	letter-spacing: -0.05em;
 	margin-bottom: 0
 }
 
@@ -194,12 +209,13 @@ h1 {
 .tag {
 	display: inline;
 	background-color: var(--colorTertiary);
-	padding: 0em 0.5em;
+	padding-inline: 0.5em;
+	padding-block: 0em .1em;
 	border-radius: 1000px;
-	font-size: 0.75em;
+	font-size: 0.85em;
 	
 	position: relative;
-	top: -2px;
+	top: -1px;
 }
 
 
@@ -223,37 +239,65 @@ h1 {
 details > summary {
 	font-weight: bold;
     list-style-type: none;
-	color: var(--colorSecondary);
+	color: var(--colorBackground);
 	cursor: pointer;
+
+	background-color: var(--colorSecondary);
+	padding-inline: .5em;
+	padding-block: .1em .1em;
+
+	margin-bottom: 0;
+	border-radius: 5px;
+}
+
+details > summary::before {
+    content: '⋆';
+	margin-right: .4em;
+	color: var(--colorBackground);
 }
 
 details > summary::after {
-    content: '⤵';
-	/* font-weight: 400; */
-	margin-left: .25em;
-	color: var(--colorSecondary);
-	/* font-size: 110%;; */
-	/* background-color: var(--colorSecondary); */
+    content: 'show';
+	margin-left: .6em;
+
+	position: relative;
+	top: -2px;
+
+	text-transform: uppercase;
+	font-size: 70%;
+
+	background-color: var(--colorBackground);
+	color: var(--colorPrimary);
+
+	padding-block: 0 0.1em;
+	padding-inline: .4em;
+
+	border-radius: .9em;
 }
 
 details[open] > summary::after {
-    content: '⤴';
+    content: 'hide';
+	/* background-color: var(--colorText);
+	color: var(--colorBackground); */
 }
 
 details[open] > summary {
-    margin-bottom: 0.5em;
+    margin-bottom: 0em;
+	background-color: var(--colorPrimary);
 	
 }
 
 details {
-    border: 1px dashed var(--colorSecondary);
-	border-radius: 0.1em;
-    padding-block: 0.3em;
-	padding-inline: .5em;
+	
 }
 
 details > p {
 	margin-block: 0.5em;
+}
+
+details > div {
+	border-left: 1px solid var(--colorPrimary);
+	padding-left: .75em;
 }
 
 
