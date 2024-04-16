@@ -88,8 +88,8 @@ a:hover {
 }
 
 a::after {
-	content:"🡥";
-	display: inline-block;
+	/* content:"🡥";
+	display: inline-block; */
 }
 
 
