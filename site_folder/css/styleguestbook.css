@@ -8,9 +8,13 @@
 	--widthContent: 650px;
 
 	/* general page and text colours */
-	--colorBackground: #ddbb94;
-	--colorPrimary: #5E4B3C;
+	/* --colorPrimary: #9c5f2f; */
+	--colorPrimary: #695c42;
 	--colorSecondary: #d2ae82;
+	--colorTertiary: #a9544c;
+
+	--colorBackground: #ddbb94;
+	--colorText: #47382d;
 
 	/* fonts */
 	--fontTitle: "Gloock", serif;
@@ -63,12 +67,14 @@ h3 {
 	margin-left: 10%;
 }
 
+
+
+
 #HCB_comment_box {
 	padding: 2em;
 	background-color: var(--colorBackground);
 }
 
-/* boxes */
 #hcb_form_website, #hcb_form_name, #hcb_form_content {
 	font-family: "montserrat";
 	font-size: 14px;
@@ -120,7 +126,7 @@ a::after {
 } 
 
 .home:hover {
-	color: var(--colorPrimary)
+	color: var(--colorTertiary)
 }
 
 .home::after {
@@ -128,6 +134,132 @@ a::after {
 }
 
 
+
+
+
+/* COMMENT BOX BULLSHIT */
+/* FROM DEBTDEATH'S CC-LINK TEMPLATE */
+
+#HCB_comment_box h3 {
+    display:none;
+}
+
+#HCB_comment_box #hcb_form textarea, #HCB_comment_box #hcb_form #hcb_form_name, #HCB_comment_box #hcb_form #hcb_form_website, #HCB_comment_box #hcb_form #hcb_form_email {
+    -webkit-appearance: none;
+    -webkit-text-fill-color: var(--colorText);
+    color: var(--colorText);
+    font-family: var(--fontText);
+    font-size: 14px;
+    padding: 8px;
+    /* background-color: transparent; */
+    border: var(--borderSolid);
+    width: 100%;
+}
+
+#HCB_comment_box #HCB_comment_form_box {
+    border-bottom: var(--borderDotted);
+}
+
+.hcb-wrapper > #hcb_form_name_container {
+	width: 100%;
+}
+
+#HCB_comment_box #hcb_form #hcb_form_name_container {
+  margin-right: 8px;
+}
+
+#hcb_form {
+	margin-left: 8px;
+}
+
+#hcb_form > div {
+	display: flex;
+	justify-content: center;
+}
+
+#HCB_comment_box .hcb-wrapper-half {
+    display:block;
+    width:50%;
+    float:left;
+}
+#HCB_comment_box .hcb-wrapper {
+    clear:both;
+}
+
+/* the submit button */
+#HCB_comment_box input.submit, #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+  border: none;
+  background-color: var(--colorPrimary);
+  color: var(--colorBackground);
+  font-family: var(--fontText);
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow: 0.5em 0.5em var(--colorBorder);
+  border-radius: 2em;
+  
+  padding-inline: 12px;
+  padding-block: 6px;
+}
+
+#HCB_comment_box input.submit:hover{
+	background-color: var(--colorSecondary);
+	color: var(--colorTertiary);
+	box-shadow: none;
+	/* transform: translate(0.5em,0.5em); */
+}
+
+.admin-link {
+	margin-left: 1em;
+	position: relative;
+	top: 2px;
+	display: none;
+}
+
+#HCB_comment_box #hcb_form .hcb-door-out {
+    width: 16px;
+}
+#HCB_comment_box #hcb_form .hcb-door-in {
+    width: 16px;
+}
+
+#HCB_comment_box .home-desc {
+	font-size: 12px;
+    /* text-transform: lowercase; */
+    text-align: left;
+    display: flex;
+    flex-flow: row;
+    align-items: baseline;
+}
+
+#HCB_comment_box span.home-desc {
+  opacity:1;
+}
+
+#HCB_comment_box #hcb_form .home-desc a, #HCB_comment_box .home-desc a:visited {
+    color: var(--colorTertiary);
+    text-decoration: none;
+}
+
+/*file input i dont want this lol */
+
+#HCB_comment_box input[type="file"]{
+    display:none;
+}
+#HCB_comment_box input.inputfile{
+    width:.1px;
+    height:.1px;
+    opacity:0;
+    overflow:hidden;
+    position:absolute;
+    z-index:-1
+}
+#HCB_comment_box input.inputfile+label {
+    display: none;
+}
+
+#HCB_comment_box > a {
+    display: none;
+}
 
 
 
@@ -150,6 +282,10 @@ a::after {
 	.home {
 		margin-top: -15px;
 		font-size: 200%;
-		/* transform: translateY(-15px); */
+	}
+
+	
+	#HCB_comment_box {
+		padding: 1em;
 	}
 }

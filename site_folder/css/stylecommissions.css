@@ -8,9 +8,27 @@
 	--colorBackground: #c6bfb3;
 	--colorText: #0e161c;
 
-	--colorPrimary: #606a43 ;
-	--colorSecondary: #694c2b;
+	--colorPrimary: #596437 ;
+	--colorSecondary: #6b461d;
 	--colorTertiary: #3d4049;
+
+	/* palestine theme */
+	--colorBackground: #171c1c;
+	--colorText: #c6bfb3;
+
+	--colorPrimary: #9fb229;
+	--colorSecondary: #ff5c3f;
+	--colorTertiary: #6e7588;
+
+
+	/* dark mode */
+	/* --colorBackground: #111515;
+	--colorText: #c6bfb3;
+
+	--colorPrimary: #a8b171 ;
+	--colorSecondary: #a98150;
+	--colorTertiary: #6e7588; */
+
 
 	--fontTitle: "Forum", serif;
 	--fontText: 'Overpass', serif;
@@ -25,6 +43,14 @@
 
 
 /* global site structure */
+
+ol > li {
+	margin-bottom: .6rem;
+}
+
+ol > li > ul {
+	padding-left: 1.5rem;
+}
 
 * {
 	box-sizing: border-box;
@@ -50,10 +76,11 @@ b {
 
 a {
 	color: var(--colorPrimary);
-	font-weight: bold;
-	text-decoration: underline wavy;
+	/* font-weight: bold; */
+	text-decoration: underline;
 
 	transition: all .25s;
+	cursor: pointer;
 }
 
 a:hover {
@@ -61,7 +88,8 @@ a:hover {
 }
 
 a::after {
-	content:"\2924";
+	content:"🡥";
+	display: inline-block;
 }
 
 
@@ -134,7 +162,7 @@ section {
 	background-color: var(--colorBackground);
 	margin-block: 1em;
 	padding: 3em;
-	padding-block: 1em 2em;
+	padding-block: 1em 3em;
 
 	border-radius: 0 0 5em 0em;
 
@@ -248,7 +276,7 @@ p {
 
 i {
 	color: var(--colorSecondary);
-	text-decoration: underline dashed;
+	/* text-decoration: underline dashed; */
 }
 
 
@@ -268,6 +296,27 @@ h2 {
 	text-decoration: underline;
 	margin-top: 0.5em;
 	margin-bottom: .75em;
+}
+
+
+.orgs {
+	text-align: center;
+}
+
+.orgs h3 {
+	text-align: center;
+	font-size: 1.5rem;
+	margin-block: .2rem;
+}
+
+.orgs .brand {
+	max-width: 150px;
+	border-radius: 1000px;
+}
+
+.orgs img {
+	margin-top: 1rem;
+	cursor: auto;
 }
 
 
@@ -308,6 +357,10 @@ h1, h2 {
 	margin-bottom: .25em;
 }
 
+h1 {
+	font-size: 320%;
+}
+
 
 .status {
 	text-align: center;
@@ -333,7 +386,7 @@ nav ul {
 	display: table;
 	list-style-type: none;
 	margin-inline: auto;
-	margin-block: 0 1em;
+	margin-block: 0 .75em;
 	padding: 0;
 }
 
@@ -354,7 +407,7 @@ nav ul li a {
 }
 
 nav ul li a::after {
-	content:"\2924";
+	content:"🡥";
 	margin-left: .2em;
 }
 
@@ -381,7 +434,7 @@ ul#contact li::before {
 }
 
 ul#contact li a {
-	text-decoration: underline wavy;
+	text-decoration: underline;
 	color: var(--colorPrimary);
 
 	padding-inline: .4em;
@@ -402,9 +455,10 @@ ul#contact li a::after {
 
 
 #copy_form {
-	margin: 1em 1em;
-	padding: 1em 1em;
-	border: 1px dashed var(--colorSecondary);
+	margin-block: 1em;
+	/* margin-inline: 3em; */
+	padding: 1em 1.2em;
+	border: 1px solid var(--colorSecondary);
 }
 
 #copy_form p {
@@ -427,7 +481,7 @@ section hr {
 	color: var(--colorSecondary);
 	background-color: var(--colorSecondary);
 
-	margin: 1.5em;
+	margin: 2em;
 }
 
 

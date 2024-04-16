@@ -31,7 +31,7 @@
     font-family: var(--fontText);
     font-size: 14px;
     padding: 8px;
-    background-color: transparent;
+    /* background-color: transparent; */
     border: var(--borderSolid);
     width: 100%;
 }
@@ -70,20 +70,22 @@
 #HCB_comment_box input.submit, #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
   border: var(--borderSolid);
   background-color: var(--colorPrimary);
-  color: var(--colorText);
-  font-family: var(--fontTitle);
+  color: var(--colorBackground);
+  font-family: var(--fontText);
   font-weight:bold;
   cursor:pointer;
-  padding: 12px;
   box-shadow: 0.5em 0.5em var(--colorBorder);
   border-radius: 2em;
+  
+  padding-inline: 12px;
+  padding-block: 6px;
 }
 
 #HCB_comment_box input.submit:hover{
-	background-color: var(--colorBorder);
-	color: var(--colorBackground);
+	background-color: var(--colorSecondary);
+	color: var(--colorPrimary);
 	box-shadow: none;
-	transform: translate(0.5em,0.5em);
+	/* transform: translate(0.5em,0.5em); */
 }
 
 .admin-link {
@@ -95,6 +97,7 @@
 }
 #HCB_comment_box #hcb_form .hcb-door-in {
     width: 16px;
+    display: none;
 }
 
 #HCB_comment_box .home-desc {

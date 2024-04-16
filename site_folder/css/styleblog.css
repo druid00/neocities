@@ -5,12 +5,23 @@
 :root {
 	--widthContent: 900px;
 
-	--colorBackground: rgb(194, 189, 171);
+	--colorBackground: #d4cfbf;
 	--colorText: #2d3338;
 
 	--colorPrimary: #5D676E;
 	--colorSecondary: #73522d;
-	--colorTertiary: #918a76;
+	--colorTertiary: #a89f87;
+
+
+	/* dark mode */
+
+	--colorBackground: #1d1f24;
+	--colorText: #ddd8c8;
+
+	--colorPrimary: #8296a9;
+	--colorSecondary: #b18552;
+	--colorTertiary: #434449;
+
 
 	--fontTitle: "Chonburi", serif;
 	/* --fontText: 'Source Sans 3', serif; */
@@ -41,7 +52,7 @@ b {
 	color: var(--colorSecondary);
 }
 
-i {
+i, em {
 	/* color: var(--colorPrimary); */
 }
 
@@ -54,11 +65,11 @@ a {
 }
 
 a:hover {
-	color: var(--colorTertiary);
+	color: var(--colorPrimary);
 }
 
 a::after {
-	content: "\2924";
+	content: "🡥";
 	display: inline-block;
 }
 
@@ -80,7 +91,8 @@ hr {
 
 	background-color: var(--colorBackground);
 
-	margin: 6em 3em;
+	margin-inline: 8% 0;
+	margin-block: 6em;
 	padding: 4em;
 	padding-left: 9.5em;
 
@@ -94,14 +106,20 @@ hr {
 .text img {
 	display: block;
 	margin: 1.5em auto;
-	max-height:500px; max-width:90%;
+	max-height:450px;
+	/* max-width:550px; */
 	box-shadow: 5px 5px var(--colorSecondary);
 	transition: all .25s;
+
+	border: 1px solid var(--colorSecondary);
+
+	width: 80%;
 }
 
 .text img:hover {
 	box-shadow: 5px 5px var(--colorTertiary);
-	filter: 
+	border-color: var(--colorTertiary);
+	filter: brightness(1.2);
 }
 
 
@@ -170,8 +188,8 @@ hr {
 	text-decoration: none;
 }
 .ul_navigation li a:hover {
-	color: var(--colorText);
-	background-color: var(--colorTertiary);
+	/* color: var(--colorText); */
+	background-color: var(--colorPrimary);
 }
 .ul_navigation li a::after {
 	content: "\2924";
@@ -213,6 +231,9 @@ h1 {
 	padding-block: 0em .1em;
 	border-radius: 1000px;
 	font-size: 0.85em;
+	
+	/* font-weight: bold; */
+	/* color: var(--colorBackground); */
 	
 	position: relative;
 	top: -1px;
@@ -267,7 +288,7 @@ details > summary::after {
 	font-size: 70%;
 
 	background-color: var(--colorBackground);
-	color: var(--colorPrimary);
+	color: var(--colorSecondary);
 
 	padding-block: 0 0.1em;
 	padding-inline: .4em;
@@ -277,6 +298,7 @@ details > summary::after {
 
 details[open] > summary::after {
     content: 'hide';
+	color: var(--colorPrimary);
 	/* background-color: var(--colorText);
 	color: var(--colorBackground); */
 }
@@ -298,8 +320,23 @@ details > p {
 details > div {
 	border-left: 1px solid var(--colorPrimary);
 	padding-left: .75em;
+	margin-left: 2px;
+
+	position: relative;
+	top: -.4rem;
 }
 
+
+
+#new::before {
+	content: url('../img/new.gif');
+
+	position: relative;
+	top: -2px;
+
+	margin-right: .2em;
+	/* content: "sdfjhsdfj"; */
+}
 
 
 /* mobile */

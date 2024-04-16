@@ -67,6 +67,7 @@ a {
 
 .links {
 	list-style-type: disc;
+	padding-left: 2rem;
 }
 
 .links > li {
@@ -83,7 +84,7 @@ a {
 }
 
 .links a::after {
-	content: "\2924";
+	content: "🡥";
 	display: inline-block;
 }
 

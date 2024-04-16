@@ -54,13 +54,13 @@ body {
 
 hr {
     height: 1px;
-    /* width: 50%; */
+    /* width: 10%; */
 
     border: none;
     color: var(--colorPrimary);
     background-color: var(--colorPrimary);
 
-    margin-block: 1rem;
+    margin-block: 2.5rem;
 }
 
 img {
@@ -102,11 +102,14 @@ h1.logo {
 /* ------- */
 
 .widgets {
-    /* padding-inline: 1rem; */
-    margin-block: 1.5rem;
+    padding-inline: 1rem;
+    padding-block: .5rem; 
+    margin-block: 1rem;
     
     /* border: var(--borderTertiary); */
     text-align: left;
+
+    border: 1px solid var(--colorTertiary);
 }
 
 .widgets p {
@@ -197,32 +200,50 @@ ul.icons > li > a:hover {
 
 details > summary {
     list-style-type: none;
-	cursor: help;
+	cursor: pointer;
     color: var(--colorPrimary);
-    
+
     transition: color .25s;
 }
 
-details > summary:hover {
-    color: var(--colorSecondary);
-}
-
-details > summary::after {
-    content: '⤵';
-	margin-left: .25em;
-}
-
-details[open] > summary::after {
-    content: '⤴';
+details:hover > summary,
+details:hover > summary::after {
+    color: var(--colorTertiary);
 }
 
 details[open] > summary {
-    margin-bottom: 0.5em;
+    color: var(--colorTertiary);
+}
+
+details > summary::after {
+    content: '[show]';
+
+    color: var(--colorPrimary);
+
+    font-size: 70%;
+    padding-inline: .3em;
+	margin-left: .5em;
+
+    position: relative;
+    top: -1px;
+    
+
+    transition: color .25s;
+}
+
+details[open] > summary::after {
+    content: '[hide]';
+
+    color: var(--colorTertiary);
+}
+
+details[open] > summary {
+    margin-bottom: 0em;
 }
 
 details {
-    margin-block: 1rem;
     text-transform: lowercase;
+    margin-top: .5rem;
 }
 
 details ul {
@@ -233,6 +254,17 @@ details ul {
 details > div {
     border-left: 1px dotted var(--colorText);
     padding-left: .8rem;
+}
+
+
+
+#new::before {
+	content: url('../img/new.gif');
+
+	position: relative;
+	top: 1px;
+
+	margin-right: .3rem;
 }
 
 
@@ -275,9 +307,16 @@ details > div {
     .widgets {
         margin-block: 0rem 0;
         text-align: center;
+        border: none;
+        padding: none;
+        margin: none;
     }
 
     hr {
-        width: 50%;
+        display: none;
+    }
+
+    details {
+        /* margin-top: 0rem; */
     }
 } 

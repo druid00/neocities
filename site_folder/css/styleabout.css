@@ -4,8 +4,7 @@
 
 :root {
 	/* column widths */
-	--widthSidebar: 275px;
-	--widthContent: 900px;
+	--widthContent: 875px;
 
 	/* general page and text colours */
 	--colorBackground: #191713;
@@ -16,31 +15,13 @@
 	--colorSecondary: #b19272;
 	--colorTertiary: #715344;
 
-	/* border and box shadow colours */ 
-	--colorBorder: #dbb281; /*var(--colorPrimary);*/
-	--colorShadow: var(--colorPrimary);
-
 	/* fonts */
 	--fontText: 'El Messiri', serif;
 	--fontHeader: 'Forum', serif;
 
-	/* borders */
-	--borderSolid: 1px solid var(--colorBorder);
-	--borderDotted: 1px dotted var(--colorBorder);
-	--borderTree: 1px solid var(--colorBorder);
-	--borderHeading: 1px solid var(--colorBorder);
-
-	/* gallery settings */
-	--columnCount: 2;
-	--columnGap: 16px;
-
-	--sidebarGap: 20px;
-
 	/* background image FOR ALL PAGES */
 	--imageBackground: url(../img/art/birds.png);
 	--imageFrame: url(../img/frame.png);
-
-	--duration: 3s;
 }
 
 
@@ -125,15 +106,19 @@ b {
 	text-transform: uppercase;
 	background-color: var(--colorSecondary);
 	color: var(--colorBackground);
-	padding-inline: .5em;
-	padding-block: 0;
-	border-radius: 100em;
-	font-size: .85em;
+	font-size: .75em;
 	font-weight: bold;
-	/* line-height: -10px; */
 
 	position: relative;
-	top: -1px;
+	top: -2px;
+
+	line-height: 0;
+	padding-inline: .6em;
+	padding-block: .2em 0em;
+
+	margin-right: .2em;
+
+	border-radius: 0 .7em 0 .7em;
 }
 
 .page {
@@ -200,19 +185,15 @@ img {
 
 @media screen and (max-width: 600px) {
 	.home {
-		display:block;
-		float: none;
-		text-align: right;
-		margin: 50px 0 0 0;
-		padding: 0;
 		
+		font-size: 1.35rem;
 	}
 	h1 {
 		margin-top: 0.25em;
 	}
 	.page {
 		padding: 1.5em;
-		padding-top: 6.5em;
+		padding-top: 9.5em;
 		margin-left:  0;
 		margin-right: 0;
 	}
