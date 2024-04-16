@@ -107,13 +107,11 @@ hr {
 	display: block;
 	margin: 1.5em auto;
 	max-height:450px;
-	/* max-width:550px; */
+	max-width:80%;
 	box-shadow: 5px 5px var(--colorSecondary);
 	transition: all .25s;
 
 	border: 1px solid var(--colorSecondary);
-
-	width: 80%;
 }
 
 .text img:hover {
