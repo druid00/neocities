@@ -5,19 +5,27 @@
 :root {
 	--widthContent: 980px;
 
-	--colorBackground: #c6bfb3;
+	/* --colorBackground: #c6bfb3;
 	--colorText: #0e161c;
 
 	--colorPrimary: #596437 ;
 	--colorSecondary: #6b461d;
-	--colorTertiary: #3d4049;
+	--colorTertiary: #3d4049; */
 
 	/* palestine theme */
-	--colorBackground: #171c1c;
+	/* --colorBackground: #171c1c;
 	--colorText: #c6bfb3;
 
 	--colorPrimary: #9fb229;
 	--colorSecondary: #ff5c3f;
+	--colorTertiary: #a49696; */
+
+	/* palestine theme 2 */
+	--colorBackground: #071c1c;
+	--colorText: #ebc88e;
+
+	--colorPrimary: #9fb229;
+	--colorSecondary: #ff4f30;
 	--colorTertiary: #a49696;
 
 
@@ -88,8 +96,8 @@ a:hover {
 }
 
 a::after {
-	/* content:"🡥";
-	display: inline-block; */
+	content:"\2197";
+	display: inline-block;
 }
 
 
@@ -236,12 +244,12 @@ td {
 	flex: 50%;
 }
 #L.half_col {
-	padding-right: 1em;
-	border-right: var(--borderSolid);
+	padding-right: .5rem;
+	/* border-right: var(--borderSolid); */
 	margin: auto;
 }
 #R.half_col {
-	padding-left: 1em;
+	padding-left: .5rem;
 	margin: auto;
 }
 
@@ -316,7 +324,9 @@ h2 {
 
 .orgs img {
 	margin-top: 1rem;
+	margin-bottom: .25rem;
 	cursor: auto;
+	/* box-shadow: 3px 3px 0 0px var(--colorSecondary); */
 }
 
 

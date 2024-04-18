@@ -204,7 +204,13 @@ img {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-size: 110%;
-		letter-spacing: .2em;
+		letter-spacing: 0.1rem;
+	}
+
+	
+	h1::after, h2::after, h3::after,
+	h4::after, h5::after, h6::after {
+		margin-left: .2em;
 	}
 	
 }

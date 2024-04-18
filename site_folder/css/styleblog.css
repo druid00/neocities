@@ -69,7 +69,7 @@ a:hover {
 }
 
 a::after {
-	content: "🡥";
+	content: "\2197";
 	display: inline-block;
 }
 
@@ -101,23 +101,6 @@ hr {
 	background-size: 120px;
 
 	border-radius: 0 200px 0 0;
-}
-
-.text img {
-	display: block;
-	margin: 1.5em auto;
-	max-height:450px;
-	max-width:80%;
-	box-shadow: 5px 5px var(--colorSecondary);
-	transition: all .25s;
-
-	border: 1px solid var(--colorSecondary);
-}
-
-.text img:hover {
-	box-shadow: 5px 5px var(--colorTertiary);
-	border-color: var(--colorTertiary);
-	filter: brightness(1.2);
 }
 
 
@@ -190,8 +173,9 @@ hr {
 	background-color: var(--colorPrimary);
 }
 .ul_navigation li a::after {
-	content: "\2924";
-	margin-left: 7px;
+	content: "\2197";
+	display: inline-block;
+	margin-left: 2px;
 }
 
 
@@ -238,22 +222,64 @@ h1 {
 }
 
 
+#new::before {
+	content: url('../img/new.gif');
+
+	position: relative;
+	top: -2px;
+
+	margin-right: .2em;
+	/* content: "sdfjhsdfj"; */
+}
+
+
+
+/* imgs */
+
+.text img {
+	display: block;
+	margin: 1.5em auto;
+
+	box-shadow: 4px 4px var(--colorSecondary);
+	border: 1px solid var(--colorSecondary);
+	transition: all .25s;
+
+	max-height:450px;
+	/* max-width:550px; */
+	
+	max-width:85%;
+}
+
+.text img:hover {
+	box-shadow: 4px 4px var(--colorTertiary);
+	border-color: var(--colorTertiary);
+	filter: brightness(1.2);
+}
 
 .img_grid {
-	margin-block: 1.5em;
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	flex-flow: row wrap;
+
+	margin-block: 1.5em;
 }
 
 .img_grid > img {
-	margin-inline: .25em;
-	margin-block: .25em;
+	margin-inline: .4rem;
+	margin-block: .4rem;
 }
 
+img.img_half {
+	max-width: 45%;
+} 
+
+img.img_third {
+	max-width: 30%;
+} 
 
 
+/* spoiler tags */
 
 details > summary {
 	font-weight: bold;
@@ -307,10 +333,6 @@ details[open] > summary {
 	
 }
 
-details {
-	
-}
-
 details > p {
 	margin-block: 0.5em;
 }
@@ -325,24 +347,20 @@ details > div {
 }
 
 
-
-#new::before {
-	content: url('../img/new.gif');
-
-	position: relative;
-	top: -2px;
-
-	margin-right: .2em;
-	/* content: "sdfjhsdfj"; */
-}
-
-
 /* mobile */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
 	.img_grid {
-		/* flex-direction: row; */
+		flex-direction: row;
 	}
+
+	img.img_half {
+		max-width: 85%;
+	} 
+
+	img.img_third {
+		max-width: 55%;
+	} 
 }
 
 

@@ -84,7 +84,7 @@ a {
 }
 
 .links a::after {
-	content: "🡥";
+	content: "\2197";
 	display: inline-block;
 }
 
