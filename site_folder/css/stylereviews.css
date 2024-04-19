@@ -1,0 +1,322 @@
+:root {
+	/* general page and text colours */
+	--colorBackground: #14171e;
+	--colorText: #e1cdb2;
+
+	/* accent colours */
+	--colorPrimary: #78afa5;
+	--colorSecondary: #963723;
+	--colorTertiary: #7a6e39;
+
+	/* fonts */
+	--fontTitle: 'Spectral', serif;
+	--fontBody: 'EB Garamond', serif;
+
+	/* background image */
+	--imageBackground: url("../img/art/harbor.jpg");
+	--imageFrame: url("../img/frame.png");
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--colorBackground);
+	background-image: var(--imageBackground);
+	background-size: cover;
+	background-attachment: fixed;
+
+	color: var(--colorText);
+	font-family: var(--fontBody);
+    font-size: 1rem;
+
+}
+
+.page {
+    max-width: 1000px;
+    background-color: var(--colorBackground);
+
+	background-image: var(--imageFrame);
+    background-repeat: repeat-x;
+    background-size: 250px;
+
+    margin-inline: auto;
+    padding: 2rem;
+    padding-top: 4.5rem;
+}
+
+/* page style */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fontTitle);
+    font-weight: normal;
+}
+
+.head > h1 {
+    /* font-size: 60px; */
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 10px;
+    margin-top:0;
+    margin-bottom: 0;
+    text-shadow: 0 4px var(--colorBackground);
+}
+
+.head > p {
+    margin-top: 0;
+}
+
+.container {
+    height: 600px;
+    overflow: auto;
+    overflow-x: none;
+
+    border: 1px solid var(--colorSecondary);
+    border-top: none;
+    padding: 1rem;
+}
+
+/* filters */
+
+.entry {
+    margin-bottom: 1rem;
+    display: none; /* Hidden by default */
+    
+    border-bottom: 1px solid var(--colorSecondary);
+    padding-bottom: 1rem;
+}
+
+.show {
+    display: block;
+}
+
+/* buttons */
+
+#button_list {
+    /* margin-bottom: 1rem; */
+    overflow: hidden;
+    border: 1px solid var(--colorSecondary);
+    border-bottom: none;
+    background-color: var(--colorSecondary);
+
+    /* margin-bottom: 1rem; */
+    padding-inline: .4rem;
+    padding-top: 1px;
+
+    /* border-radius: 5px; */
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-family: var(--fontBody);
+    font-size: 100%;
+
+    padding: 0.4rem 0.9rem;
+    /* margin-inline: 0rem; */
+    background-color: var(--colorSecondary);
+    color: var(--colorText);
+    border-radius: 10px 10px 0 0;
+
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--colorPrimary);
+    color: white;
+}
+
+.btn.active {
+    background-color: var(--colorBackground);
+    /* color: white; */
+}
+
+/* reviews */
+
+.poster {
+    text-align: center;
+}
+
+.poster > img {
+    width: 100%;
+    max-width: 270px;
+
+    border: 1px solid var(--colorSecondary);
+    box-shadow: 4px 4px 0 0 var(--colorSecondary);
+
+    transition: all 0.3s;
+}
+
+.poster > img:hover {
+    border-color: var(--colorTertiary);
+    box-shadow: 4px 4px 0 0 var(--colorTertiary);
+}
+
+.review {
+    padding-left: 1rem;
+}
+
+.review a {
+    color: var(--colorPrimary);
+    font-weight: bold;
+
+    transition: all 0.3s;
+}
+
+.review a:hover {
+    color: var(--colorTertiary);
+    font-weight: bold;
+}
+
+.review a::after {
+    display: inline-block;
+    content: "\2197";
+}
+
+.review > h2 {
+    margin-block: 0;
+    background-color: var(--colorSecondary);
+    padding-inline: .4rem;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.8rem;
+    /* letter-spacing: -1px; */
+
+    transition: all 0.3s;
+}
+
+.review > h2:hover {
+    background-color: var(--colorTertiary);
+}
+
+
+.review .date {
+    font-style: italic;
+    /* margin-top: 0; */
+    text-align: right;
+    /* padding-inline: 0.2rem; */
+    /* color: var(--colorSecondary); */
+    /* background-color: var(--colorPrimary); */
+}
+
+/* icons */
+
+.review > h2::before {
+    display: inline-block;
+    font: normal normal normal 100% FontAwesome;
+    text-align: center;
+
+    font-size: 1.2rem;
+    margin-inline: 0.2rem 0.5rem;
+}
+
+#button_list > button::before {
+    display: inline-block;
+    font: normal normal normal 100% FontAwesome;
+    font-size: 0.8rem;
+    margin-inline: 0rem 0.4rem;
+}
+
+#button_list > button.film::before,
+.film .review > h2::before {
+    content: "\f008";
+}
+
+#button_list > button.game::before,
+.game .review > h2::before {
+    content: "\f11b";
+}
+
+#button_list > button.anime::before,
+.anime .review > h2::before {
+    content: "\f083";
+}
+
+#button_list > button.manga::before,
+.manga .review > h2::before {
+    content: "\f02d";
+}
+
+#button_list > button.all::before {
+    content: "\f5fd";
+}
+
+
+/* home btn */
+
+.home {
+    display: inline-block;
+    float: right;
+    color: var(--colorSecondary);
+
+    margin: 4px 4px;
+
+    background-color: var(--colorBackground);
+    border-radius: 100rem;
+
+    text-align: center;
+    font-size: 150%;
+    padding-top: 4px;
+
+    --icon-size: 40px;
+    width: var(--icon-size);
+    height: var(--icon-size);
+
+    transition: all .3s
+}
+
+.home:hover {
+    background-color: var(--colorPrimary);
+    color: white;
+}
+
+/* responsive */
+
+.row {
+	/* border: 1px solid blue; */
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    width: 100%;
+    float: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        height: 530px;
+    }
+    .page {
+        margin: .5rem;
+        padding: 1rem;
+    }
+    .poster {
+        margin-block: 1rem;
+    }
+    .review {
+        padding-left: 0;
+    }
+} 
+
+@media only screen and (min-width: 600px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+} 

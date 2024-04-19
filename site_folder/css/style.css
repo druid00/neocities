@@ -171,20 +171,21 @@ ul.icons > li {
 }
 
 ul.icons > li > a {
-	font-family: var(--fontBody);
-	text-decoration: none;
+    display: inline-block;
 
     border: var(--borderPrimary);
     font-size: 1rem;
 
+    --icon-size: 30px;
+    width: var(--icon-size);
+    height: var(--icon-size);
     border-radius: 100rem;
-    padding: .18rem;
     
     transition: all .25s;
 }
 
-ul.icons > li > a > i.fa {
-    width: 1.35rem;
+ul.icons > li > a > i {
+    padding-top: .35rem;
 }
 
 ul.icons > li > a:hover {
@@ -265,6 +266,12 @@ details > div {
 	top: 1px;
 
 	margin-right: .3rem;
+}
+
+#new a::after,
+details > div a::after {
+    content: "\2197";
+    display: inline-block;
 }
 
 
