@@ -159,6 +159,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 1rem;
 }
 
+.review p {
+    text-align: justify;
+}
+
 .review a {
     color: var(--colorPrimary);
     font-weight: bold;

@@ -81,8 +81,6 @@ hr {
 	margin: 2em 2em;
 }
 
-
-
 .page {
 	font-size: 1.1em;
 	line-height: 1.3em;
@@ -102,8 +100,6 @@ hr {
 
 	border-radius: 0 200px 0 0;
 }
-
-
 
 .title {
 	margin-bottom: 2em;
@@ -178,10 +174,6 @@ hr {
 	margin-left: 2px;
 }
 
-
-
-
-
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--fontTitle);
 	color: var(--colorPrimary);
@@ -195,8 +187,6 @@ h1 {
 	letter-spacing: -0.05em;
 	margin-bottom: 0
 }
-
-
 
 .tags {
 	margin: 1em 0em;
@@ -221,7 +211,6 @@ h1 {
 	top: -1px;
 }
 
-
 #new::before {
 	content: url('../img/new.gif');
 
@@ -232,6 +221,10 @@ h1 {
 	/* content: "sdfjhsdfj"; */
 }
 
+
+.text p {
+	text-align: justify;
+}
 
 
 /* imgs */
