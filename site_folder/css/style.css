@@ -205,6 +205,7 @@ details > summary {
     color: var(--colorPrimary);
 
     transition: color .25s;
+    display: inline-block;
 }
 
 details:hover > summary,
@@ -270,7 +271,7 @@ details > div {
 
 #new a::after,
 details > div a::after {
-    content: "\2197";
+    content: "\279A";
     display: inline-block;
 }
 

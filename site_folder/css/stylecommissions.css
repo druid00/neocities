@@ -13,20 +13,20 @@
 	--colorTertiary: #3d4049; */
 
 	/* palestine theme */
-	/* --colorBackground: #171c1c;
-	--colorText: #c6bfb3;
+	--colorBackground: #0a1010;
+	--colorText: #c7bca9;
 
 	--colorPrimary: #9fb229;
 	--colorSecondary: #ff5c3f;
-	--colorTertiary: #a49696; */
+	--colorTertiary: #a49696;
 
 	/* palestine theme 2 */
-	--colorBackground: #0c1919;
-	--colorText: #ffdba1;
+	/* --colorBackground: #f6f6f6;
+	--colorText: #0c1919;
 
-	--colorPrimary: #9fb229;
+	--colorPrimary: #85970e;
 	--colorSecondary: #ff4f30;
-	--colorTertiary: #a49696;
+	--colorTertiary: #a49696; */
 
 
 	/* dark mode */
@@ -39,7 +39,7 @@
 
 
 	--fontTitle: "Forum", serif;
-	--fontText: 'Overpass', serif;
+	--fontText: 'DM Sans', serif;
 
 	--imageBackground: url(../img/art/procession.jpg);
 	--imageCanvas: url(../img/canvas.png);
@@ -89,15 +89,21 @@ a {
 
 	transition: all .25s;
 	cursor: pointer;
+	padding-inline: 2px;
 }
 
 a:hover {
-	color: var(--colorTertiary);
+	background-color: var(--colorTertiary);
+	color: var(--colorBackground);
 }
 
 a::after {
-	content:"\2197";
+	content:"\279A";
 	display: inline-block;
+	/* color: #999; */
+	font-weight: normal;
+	/* position: relative;
+	top: -5px; */
 }
 
 
@@ -302,8 +308,13 @@ h2 {
 
 .tos h3 {
 	text-decoration: underline;
-	margin-top: 0.5em;
-	margin-bottom: .75em;
+	margin-block: 0.6em;
+}
+
+.tos h3::before {
+	/* content: "✽";
+	margin-right: 0.3rem;
+	display: inline-block; */
 }
 
 
@@ -318,12 +329,20 @@ h2 {
 }
 
 .orgs .brand {
-	max-width: 150px;
+	max-width: 120px;
 	border-radius: 1000px;
 }
 
+.orgs p::after {
+	content: "✽";
+	font-size: 120%;
+	display: block;
+	margin-block: 1rem 1.2rem;
+	/* color: var(--colorSecondary); */
+}
+
 .orgs img {
-	margin-top: 1rem;
+	/* margin-top: 1rem; */
 	margin-bottom: .25rem;
 	cursor: auto;
 	/* box-shadow: 3px 3px 0 0px var(--colorSecondary); */
@@ -333,12 +352,12 @@ h2 {
 
 .use {
 	list-style-type: none;
-	margin-left: 0.5em;
+	margin-left: 0.3em;
 	padding: 0;
 }
 .use li::before {
-	content:"·";
-	margin-right: 0.5em;
+	content:"✽";
+	margin-right: 0.3em;
 }
 
 
@@ -354,6 +373,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: var(--colorPrimary);
 
 	margin-block: 0.5em;
+	text-decoration: underline;
 }
 
 h1 {

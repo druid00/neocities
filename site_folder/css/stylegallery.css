@@ -4,10 +4,10 @@
 
 :root {
 	/* column widths */
-	--widthContent: 1050px;
+	--widthContent: 1000px;
 
 	/* general page and text colours */
-	--colorBackground: #191713;
+	--colorBackground: #131310;
 	--colorText: #cec8bf;
 
 	/* accent colours */
@@ -17,7 +17,7 @@
 
 	/* fonts */
 	--fontText: 'El Messiri', serif;
-	--fontTitle: 'Rakkas', serif; /*'Bigshot One', serif;*/
+	--fontTitle: 'Almendra', serif; /*'Bigshot One', serif;*/
 
 	/* borders */
 
@@ -27,7 +27,7 @@
 
 	/* background image FOR ALL PAGES */
 	--imageBackground: url("../img/art/wreck.jpg");
-	--galleryBackground: url("../img/art/blizzard.jpg");
+	/* --galleryBackground: url("../img/art/blizzard.jpg"); */
 }
 
 
@@ -55,22 +55,31 @@ h1 {
 	text-transform: lowercase;
 
 	font-style: italic; 
-	margin-block: 0 .4em;
-	
 	font-size: 6vw;
-	line-height: 0.7em;
-	letter-spacing: -0.03em;
-	max-width: 750px;
+	margin-block: 2rem .4rem;
+	line-height: 2rem;
+	
 
 	text-shadow: 4px 0px var(--colorBackground);
+}
+
+.head {
+	background-color: var(--colorBackground);
+	border: 1px solid var(--colorPrimary);
+	margin-bottom: var(--columnGap);
+	padding-inline: 1.5rem;
+
+	border-radius: 0 0 70px 0;
 }
 
 .home {
 	display:inline;
 	float:right;
-	font-size: 300%;
+	font-size: 200%;
 	text-decoration: none;
 	text-shadow: 3px 3px var(--colorBackground);
+	margin-block: 1.5rem;
+	color: var(--colorPrimary);
 }
 
 a {
@@ -120,6 +129,8 @@ hr {
 img {
 	border: 1px solid var(--colorPrimary);
 	transition: all .5s;
+	border-radius: 0 0 30px 0;
+	
 }
 
 img:hover {
@@ -160,14 +171,13 @@ img.png:hover {
 	max-width: var(--widthContent);
 	margin: auto;
 
-	background-image: var(--galleryBackground);
+	/* background-image: var(--galleryBackground);
 	
 	background-size: cover;
 	background-attachment: fixed;
-	border: 1px solid var(--colorPrimary);
-	padding: 3em;
-	margin-top: 3em;
-	margin-bottom: 3em;
+	border: 1px solid var(--colorPrimary); */
+	padding: 2rem;
+	margin-block: 3rem;
 }
 
 
@@ -180,13 +190,16 @@ img.png:hover {
 	}
 
 	h1 {
-		font-size: 300%;
+		font-size: 200%;
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
 	.home {
-		display:relative;
-		float:right;
-		font-size: 200%;
+		display:inline-block;
+		float:none;
+		font-size: 140%;
+		/* margin-bottom: 0; */
 	}
 
 	.page {
