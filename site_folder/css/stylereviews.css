@@ -26,6 +26,7 @@ body {
 	background-image: var(--imageBackground);
 	background-size: cover;
 	background-attachment: fixed;
+	background-position: center;
 
 	color: var(--colorText);
 	font-family: var(--fontBody);

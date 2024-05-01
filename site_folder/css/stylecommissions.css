@@ -38,7 +38,7 @@
 	--colorTertiary: #6e7588; */
 
 
-	--fontTitle: "Forum", serif;
+	--fontTitle: "Tapestry", serif;
 	--fontText: 'DM Sans', serif;
 
 	--imageBackground: url(../img/art/procession.jpg);
@@ -69,6 +69,7 @@ body {
 	background-image: var(--imageBackground);
 	background-size: cover;
 	background-attachment: fixed;
+	background-position: center;
 
 	color: var(--colorText);
 	font-family: var(--fontText);
@@ -369,11 +370,11 @@ h2 {
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--fontTitle);
 	font-weight: 900;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	color: var(--colorPrimary);
 
 	margin-block: 0.5em;
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 
 h1 {

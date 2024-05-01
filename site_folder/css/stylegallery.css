@@ -42,6 +42,7 @@ body {
 	background-image: var(--imageBackground);
 	background-size: cover;
 	background-attachment: fixed;
+	background-position: center;
 
 	color: var(--colorText);
 	font-family: var(--fontText);
@@ -60,7 +61,9 @@ h1 {
 	line-height: 2rem;
 	
 
-	text-shadow: 4px 0px var(--colorBackground);
+	/* text-shadow: 4px 0px var(--colorBackground); */
+
+	transition: color .3s
 }
 
 .head {
@@ -70,16 +73,20 @@ h1 {
 	padding-inline: 1.5rem;
 
 	border-radius: 0 0 70px 0;
+
+	transition: border .3s
 }
 
-.home {
-	display:inline;
-	float:right;
-	font-size: 200%;
-	text-decoration: none;
-	text-shadow: 3px 3px var(--colorBackground);
-	margin-block: 1.5rem;
-	color: var(--colorPrimary);
+.head:hover {
+	/* border: 1px solid var(--colorTertiary); */
+}
+
+.head:hover .home {
+	/* color: var(--colorTertiary); */
+}
+
+.head:hover h1 {
+	/* color: var(--colorTertiary); */
 }
 
 a {
@@ -94,6 +101,29 @@ p a::after {
 }
 a:hover{
 	color: var(--colorTertiary);
+}
+
+.home {
+	display:inline;
+	float:right;
+	font-size: 140%;
+	text-decoration: none;
+
+	--icon-width: 40px;
+	width: var(--icon-width);
+	height: var(--icon-width);
+	text-align: center;
+	border-radius: 1000px;
+	/* text-shadow: 3px 3px var(--colorBackground); */
+	padding-top: 6px;
+	margin-block: 1.5rem;
+	color: var(--colorPrimary);
+	border: 1px solid var(--colorBackground);
+}
+
+.home:hover {
+	/* background-color: var(--colorPrimary); */
+	border: 1px solid var(--colorTertiary);
 }
 
 
