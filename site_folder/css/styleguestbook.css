@@ -31,6 +31,11 @@
 	box-sizing: border-box;
 }
 
+*::selection {
+    background-color: var(--colorText);
+    color: var(--colorBackground);
+}
+
 body {
 	background-image: var(--imageBackground);
 	background-size: cover;

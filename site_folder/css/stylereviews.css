@@ -21,6 +21,11 @@
 	box-sizing: border-box;
 }
 
+*::selection {
+    background-color: var(--colorText);
+    color: var(--colorBackground);
+}
+
 body {
 	background-color: var(--colorBackground);
 	background-image: var(--imageBackground);
@@ -177,11 +182,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 
     transition: all 0.3s;
+    padding-inline: 2px;
 }
 
 .review a:hover {
-    color: var(--colorTertiary);
-    font-weight: bold;
+    background-color: var(--colorTertiary);
+    color: white;
+    /* font-weight: bold; */
 }
 
 .review a::after {
@@ -289,8 +296,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home:hover {
-    color: var(--colorTertiary);
-    background-color: var(--colorBackground);
+    color: white;
+    background-color: var(--colorTertiary);
 }
 
 /* responsive */

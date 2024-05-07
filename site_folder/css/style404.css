@@ -1,0 +1,80 @@
+/* v1.1
+
+/* root settings */
+
+:root {
+	/* general page and text colours */
+	--colorBackground: #191713;
+	--colorText: #e6d4c5;
+
+	/* accent colours */
+	--colorPrimary: #e3ba8b;
+	--colorSecondary: #ba591d;
+
+	/* fonts */
+	--fontTitle: 'Forum', serif;
+	--fontBody: 'EB Garamond', serif;
+	--fontHeader: 'Forum', serif; /*'Bigshot One', serif;*/
+
+	/* background image FOR ALL PAGES */
+	--imageBackground: url("../img/art/winterscape.jpg");
+}
+
+
+/* global site structure */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--colorBackground);
+	background-image: var(--imageBackground);
+	background-size: cover;
+	background-attachment: fixed;
+    background-position: center;
+
+	color: var(--colorText);
+	font-family: var(--fontBody);
+    font-size: 1.2rem;
+}
+
+*::selection {
+    background-color: var(--colorText);
+    color: var(--colorBackground);
+}
+
+.page {
+	text-align: center;
+	
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+img {
+    border: 1px solid var(--colorPrimary);
+    transition: all .25s;
+}
+
+img:hover {
+    filter: brightness(1.2);
+    border-color: var(--colorSecondary);
+}
+
+.home {
+	display: inline-block;
+
+	color: var(--colorPrimary);
+	font-size: 130%;
+
+	transition: all .25s;
+}
+
+.home:hover {
+	color: var(--colorSecondary);
+	border-color: var(--colorSecondary);
+}

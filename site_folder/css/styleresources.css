@@ -1,0 +1,196 @@
+/* v1.1
+
+/* root settings */
+
+:root {
+	/* column widths */
+	--widthContent: 650px;
+
+	/* general page and text colours */
+	--colorBackground: #111a15;
+	--colorText: #d1ceb7;
+
+	/* accent colours */
+	--colorPrimary: #b69a66;
+	--colorSecondary: #75abc2;
+	--colorTertiary: #606529;
+
+	/* fonts */
+	--fontTitle: "Rakkas", serif;
+	--fontText: 'Rubik', serif;
+
+	/* background image */
+	--imageBackground: url(../img/art/violinist.jpg);
+}
+
+
+/* global site structure */
+
+* {
+	box-sizing: border-box;
+}
+
+*::selection {
+    background-color: var(--colorText);
+    color: var(--colorBackground);
+}
+
+body {
+	background-color: var(--colorBackground);
+	background-image: var(--imageBackground);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+
+	color: var(--colorText);
+	font-family: var(--fontText);
+	line-height: 1.5em;
+}
+
+
+.page { 
+	margin: 5rem;
+	margin-top: 10rem;
+	margin-left: 10%;
+	
+	max-width: var(--widthContent);
+	background-color: var(--colorBackground);
+	padding: 1rem;
+	padding-left: 1.6rem;
+	border-radius: 0 2rem 0 0;
+
+	border-left: 6px double var(--colorPrimary);
+}
+
+h1 { 
+	font-family: var(--fontTitle);
+	color: var(--colorPrimary);
+	text-transform: lowercase;
+	font-size: 300%;
+	margin-bottom: .5em;
+
+	text-decoration: underline wavy 2px;
+}
+
+.home {
+	display: block;
+	--icon-size: 40px;
+	height: var(--icon-size);
+	width: var(--icon-size);
+	text-align: center;
+
+	color: var(--colorBackground);
+	background-color: var(--colorPrimary);
+	font-size: 170%;
+	border-radius: 100px;
+	padding-top: .35rem;
+
+	transition: all .25s;
+
+	float: right;
+}
+
+.home:hover {
+	color: var(--colorText);
+	background-color: var(--colorTertiary);
+}
+
+ul {
+	padding-left: 1rem;
+	margin: 0;
+	margin-block: .5rem;
+}
+
+details > ul {
+	margin-bottom: 1rem;
+}
+
+details > ul > li {
+	list-style-type: none;
+	margin-bottom: .4rem;
+}
+
+details > ul > li > ul {
+	margin: 0;
+}
+
+details {
+	margin-bottom: .5rem;
+}
+
+details > summary {
+    list-style-type: none;
+	cursor: pointer;
+    color: var(--colorBackground);
+	background-color: var(--colorPrimary);
+	padding-inline: .2rem;
+
+    transition: color .15s;
+    display: inline-block;
+	font-size: 140%;
+	font-family: var(--fontTitle);
+	transition: all .15s;
+}
+
+details[open] > summary:hover,
+details > summary:hover {
+    background-color: var(--colorTertiary);
+	color: var(--colorText);
+    text-decoration: underline;
+}
+
+details[open] > summary {
+    background-color: var(--colorSecondary);
+    text-decoration: underline;
+}
+
+details > summary::before {
+    content: '✽';
+    display: inline-block;
+    margin-right: .2rem;
+    font-size: 75%;
+}
+
+details > ul {
+    border-left: 1px solid var(--colorSecondary);
+    padding-left: .6rem;
+	margin-left: .55rem;
+}
+
+
+
+li a {
+	color: var(--colorSecondary);
+	font-weight: bold;
+	transition: all .15s;
+	padding-inline: 2px;
+}
+
+li a:hover {
+	background-color: var(--colorTertiary);
+	color: var(--colorText);
+}
+
+li:nth-child(2n) a {
+	/* background-color: var(--colorSecondary); */
+}
+
+li a::after {
+    content: "\279A";
+    /* display: inline-block; */
+}
+code {
+	background-color: var(--colorBackground);
+	padding: .15rem;
+	border-radius: 2px;
+}
+
+
+
+/* mobile */
+
+@media screen and (max-width: 750px) {
+	.page {
+		margin-inline: 1em;
+	}
+}

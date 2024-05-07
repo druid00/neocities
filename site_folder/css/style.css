@@ -44,6 +44,11 @@ body {
 
 }
 
+*::selection {
+    background-color: var(--colorText);
+    color: var(--colorBackground);
+}
+
 .page {
 	max-width: 800px;
 	margin-inline: auto;
@@ -76,10 +81,12 @@ img:hover {
 a {
 	color: var(--colorPrimary);
     transition: color .25s;
+    text-decoration: none;
 }
 
 a:hover{
     color: var(--colorTertiary);
+    text-decoration: underline;
 }
 
 
@@ -117,7 +124,7 @@ h1.logo {
 }
 
 .buttons {
-    margin-block: .5rem;
+    /* margin-block: .5rem; */
     /* line-height: 0; */
 }
 
@@ -139,7 +146,7 @@ ul.menu > li {
     display: inline-block;
     text-align:center;
 
-    margin-right: 1rem;
+    margin-right: .8rem;
 }
 
 ul.menu > li > a {
@@ -161,6 +168,7 @@ ul.icons {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+    margin-top: .75rem;
 }
 
 ul.icons > li {
@@ -208,35 +216,42 @@ details > summary {
     display: inline-block;
 }
 
-details:hover > summary,
-details:hover > summary::after {
+details > summary::before {
+    content: '✽';
+    display: inline-block;
+    margin-right: .3rem;
+    font-size: 75%;
+}
+
+details > summary:hover,
+details > summary:hover::after {
     color: var(--colorTertiary);
+    /* text-decoration: 1px underline; */
 }
 
 details[open] > summary {
-    color: var(--colorTertiary);
+    color: var(--colorSecondary);
+    text-decoration: underline;
 }
 
 details > summary::after {
     content: '[show]';
-
+    display: inline-block;
     color: var(--colorPrimary);
 
     font-size: 70%;
-    padding-inline: .3em;
-	margin-left: .5em;
+    /* padding-inline: .3em; */
+	margin-left: .4em;
 
     position: relative;
     top: -1px;
     
-
     transition: color .25s;
 }
 
 details[open] > summary::after {
     content: '[hide]';
-
-    color: var(--colorTertiary);
+    color: var(--colorSecondary);
 }
 
 details[open] > summary {
@@ -245,7 +260,7 @@ details[open] > summary {
 
 details {
     text-transform: lowercase;
-    margin-top: .5rem;
+    /* margin-top: .5rem; */
 }
 
 details ul {
