@@ -1,0 +1,168 @@
+/* v1.1
+
+/* root settings */
+
+:root {
+	/* column widths */
+	--widthContent: 500px;
+
+	/* general page and text colours */
+	--colorBackground: #181b20;
+	--colorText: #dfdcc9;
+
+	/* accent colours */
+	--colorPrimary: #d4a767;
+	--colorSecondary: #99a052;
+	--colorTertiary: #8f9492;
+
+	/* border and box shadow colours */ 
+	--colorBorder: #dbb281; /*var(--colorPrimary);*/
+	--colorShadow: var(--colorPrimary);
+
+	/* fonts */
+	--fontTitle: "Rakkas", serif;
+	--fontText: 'Rubik', serif;
+
+	/* borders */
+	--borderSolid: 1px solid var(--colorBorder);
+
+	/* background image FOR ALL PAGES */
+	--imageBackground: url(../img/art/goats.jpg);
+
+	--duration: 3s;
+}
+
+
+/* global site structure */
+
+* {
+	box-sizing: border-box;
+}
+
+*::selection {
+    background-color: var(--colorText);
+    color: var(--colorBackground);
+	text-shadow: none;
+}
+
+body {
+	background-color: var(--colorBackground);
+	background-image: var(--imageBackground);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+
+	color: var(--colorText);
+	font-family: var(--fontText);
+
+	text-shadow: 1px 1px var(--colorBackground);
+}
+
+p {
+	line-height: 1.5em;
+	/* background-color: var(--colorBackground); */
+}
+
+
+.page { 
+	/* margin: 5em; */
+	margin-top: 9em;
+	/* margin-left: 10%; */
+	margin-inline: auto;
+	
+	max-width: var(--widthContent);
+}
+
+a {
+	text-shadow: none;
+}
+.links {
+	max-width: 95%;
+	margin-inline: auto;
+}
+
+.links > a {
+	display: block;
+	text-align: center;
+	
+	padding: .5rem;
+	margin-block: .7rem;
+	
+	color: var(--colorSecondary);
+	text-decoration: none;
+	background-color: var(--colorBackground);
+	font-weight: bold;
+
+	border-radius: 100px;
+	border: 2px solid var(--colorSecondary);
+	box-shadow: 1px 1px 0 1px var(--colorBackground);
+
+	transition: .25s;
+}
+
+.links a.crown {
+	color: var(--colorPrimary);
+	border-color: var(--colorPrimary);
+}
+
+.links a:hover {
+	color: var(--fontText);
+	background-color: var(--colorTertiary);
+	border-color: var(--fontText);
+	/* box-shadow: none; */
+}
+
+h1, h2 { 
+	font-family: var(--fontTitle);
+	color: var(--colorPrimary);
+	text-transform: lowercase;
+	line-height: 50%;
+
+	text-shadow: none;
+	text-shadow: .2rem .2rem var(--colorBackground);
+
+	border-radius: 100px 0 100px 0;
+	padding-bottom: 0;
+	text-decoration: underline wavy 2px;
+	text-align: center;
+}
+
+h1 { 
+	font-size: 280%;
+	margin-bottom: 2rem;
+}
+
+h2 {
+	font-size: 180%;
+	margin-top: 2rem;
+	/* text-decoration: underline wavy 2px; */
+}
+
+.home {
+	display: block;
+	--icon-size: 40px;
+	height: var(--icon-size);
+	width: var(--icon-size);
+	margin-inline: auto;
+
+	color: var(--colorPrimary);
+	border: 2px solid var(--colorPrimary);
+	font-size: 140%;
+	background-color: var(--colorBackground);
+	border-radius: 100px;
+	text-align: center;
+	padding-top: .25rem;
+
+	margin-top: 2rem;
+
+	transition: all .25s;
+	box-shadow: 1px 1px 0 1px var(--colorBackground);
+}
+
+.home:hover {
+	color: var(--colorText);
+	background-color: var(--colorTertiary);
+	border-color: var(--colorText);
+}
+
+/* mobile */

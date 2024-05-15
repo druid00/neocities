@@ -90,15 +90,15 @@ p, li {
 }
 
 a {
-	color: var(--colorTertiary);
+	color: var(--colorSecondary);
 	font-weight: bold;
 	transition: .5s
 }
 
 a::after {
-	content: "🔗";
-	display: inline-block;
-	font-size: .75em;
+	content: "\279A";
+	/* display: inline-block; */
+	/* font-size: .75em; */
 }
 
 a:hover {
