@@ -20,9 +20,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">  
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
@@ -34,16 +34,16 @@
       <div class="head">
         <a href="/" title="Home" class="home"><i class="fa fa-home"></i></a>
         <h1>Reviews</h1>
+        <div id="button_list">
+          <button class="btn all active" onclick="filterSelection('all')">all</button>
+          <button class="btn film" onclick="filterSelection('film')">films</button>
+          <button class="btn game" onclick="filterSelection('game')">games</button>
+          <button class="btn book" onclick="filterSelection('book')">books</button>
+          <!-- <button class="btn anime" onclick="filterSelection('anime')">anime</button>
+          <button class="btn manga" onclick="filterSelection('manga')">manga</button> -->
+        </div>
       </div>
 
-      <div id="button_list">
-        <button class="btn all active" onclick="filterSelection('all')">all</button>
-        <button class="btn film" onclick="filterSelection('film')">films</button>
-        <button class="btn game" onclick="filterSelection('game')">games</button>
-        <button class="btn book" onclick="filterSelection('book')">books</button>
-        <!-- <button class="btn anime" onclick="filterSelection('anime')">anime</button>
-        <button class="btn manga" onclick="filterSelection('manga')">manga</button> -->
-      </div>
 
       <!-- <hr> -->
 
@@ -55,7 +55,7 @@
           </div>
           <div class="col-9 review">
             <h2>Days (2020) dir. Tsai Ming-liang</h2>
-            <p>This film isn't for everyone. I found it beautiful. A very contemplative look into the isolation of modern day, the hope of finding respite in one night stands, and slipping back into that lonely, harmful reality as the fantasy ends and people return to their normal lives. I have a complicated relationship with my sexuality, I constantly go back and forth on whether I think I'm asexual or homosexual or bisexual or just anhedonic, so I deeply resonated with the film's slowness—that feeling of being lost when everyone else seems to have it figured out, the feeling of standing still as people walk past you to work, cars drive on forward, time moves on without you. It made me think a lot about my participation in hookup culture and asking what worth it affords me—and that answer is going to be different for everyone.</p>
+            <p>This film isn't going to be for everyone, but I found it beautiful. A very contemplative look into the isolation of modern day, the hope of finding respite in one night stands, and slipping back into that lonely, harmful reality as the fantasy ends and people return to their normal lives. I have a complicated relationship with my sexuality, I constantly go back and forth on whether I think I'm asexual or homosexual or bisexual or just anhedonic, so I deeply resonated with the film's slowness—that feeling of being lost when everyone else seems to have it figured out, the feeling of standing still as people walk past you to work, cars drive on forward, time moves on without you. It made me think a lot about my participation in hookup culture and asking what worth it affords me.</p>
             <p>I found this film on accident trying to look for <i>Perfect Days (2024)</i> on some free moviez site, and I'm honestly astounded a film found under these circumstances targeted such an emotion out of me.</p>
             <p class="date">watched: 30 Apr 2024</p>
           </div>

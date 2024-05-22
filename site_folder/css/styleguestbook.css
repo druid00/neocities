@@ -9,16 +9,16 @@
 
 	/* general page and text colours */
 	/* --colorPrimary: #9c5f2f; */
-	--colorPrimary: #695c42;
-	--colorSecondary: #d2ae82;
-	--colorTertiary: #a9544c;
+	--colorPrimary: #6d4a1b;
+	--colorSecondary: #ceaf8a;
+	--colorTertiary: #ba554e;
 
-	--colorBackground: #ddbb94;
-	--colorText: #47382d;
+	--colorBackground: #d5b999;
+	--colorText: #503a2b;
 
 	/* fonts */
-	--fontTitle: "Gloock", serif;
-	--fontText: "Montserrat", serif;
+	--fontTitle: "Almendra", serif;
+	--fontText: "Unna", serif;
 
 	/* background image FOR ALL PAGES */
 	--imageBackground: url(../img/art/brook.jpg);
@@ -42,8 +42,9 @@ body {
 	background-attachment: fixed;
 	background-position: center;
 
-	color: var(--colorPrimary);
+	color: var(--colorText);
 	font-family: var(--fontText);
+	/* font-size: 18px; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,10 +57,18 @@ h1 {
 	font-family: var(--fontTitle);
 	color: var(--colorBackground);
 	font-weight: normal;
-	font-size: 100px;
-	line-height: 55px;
-	font-style: italic;
+	font-size: 120px;
+	text-align: center;
+	font-weight: bold;
+	/* text-transform: uppercase; */
+	/* font-style: italic; */
 	margin: 0;
+
+	position: relative;
+	top: 50px;
+	letter-spacing: -3px;
+
+	z-index: -1;
 }
 
 h3 {
@@ -69,16 +78,17 @@ h3 {
 .page {
 	max-width: var(--widthContent);
 	padding: 1em;
-	margin-top: 15em;
-	margin-left: 10%;
+	margin-top: 5rem;
+	/* margin-left: 10%; */
+	margin-inline: auto;
 }
 
 
-
-
 #HCB_comment_box {
-	padding: 2em;
+	padding: 2rem;
+	padding-top: 1rem;
 	background-color: var(--colorBackground);
+	border-radius: 1rem 1rem 0 0;
 }
 
 #hcb_form_website, #hcb_form_name, #hcb_form_content {
@@ -95,10 +105,6 @@ h3 {
 	resize: vertical;
 }
 
-.admin-link a::after {
-	content: none;
-} 
-
 
 
 a {
@@ -108,37 +114,33 @@ a {
 	transition: all .2s;
 }
 
-a::after {
-	content: "⤴";
-	content: "\2924";
-	display: inline-block;
-}
 
 /* home button */
 
 .home {
-	font-size: 250%;
-	float: right;
-	/* position: relative; */
+	font-size: 170%;
 	text-decoration: none;
 	line-height: normal;
-
-	/* transform: translateY(70px); */
-
-	text-decoration: none;
-	line-height: normal;
-	text-align: right;
 	color: var(--colorBackground);
+
+	display: inline-block;
+	margin-inline: auto;
+
+	text-align: center;
+	display: block;
+	--icon-size: 40px;
+	height: var(--icon-size);
+	width: var(--icon-size);
+	border-radius: 100px;
+	padding-top: 5px;
+
+	position: relative;
+	top: 40px;
 } 
 
 .home:hover {
 	color: var(--colorTertiary)
 }
-
-.home::after {
-	content: none;
-}
-
 
 
 
@@ -201,15 +203,16 @@ a::after {
   font-weight:bold;
   cursor:pointer;
   box-shadow: 0.5em 0.5em var(--colorBorder);
-  border-radius: 2em;
+  border-radius: .3rem;
+  
   
   padding-inline: 12px;
   padding-block: 6px;
 }
 
 #HCB_comment_box input.submit:hover{
-	background-color: var(--colorSecondary);
-	color: var(--colorTertiary);
+	background-color: var(--colorTertiary);
+	color: var(--colorBackground);
 	box-shadow: none;
 	/* transform: translate(0.5em,0.5em); */
 }
@@ -229,10 +232,8 @@ a::after {
 }
 
 #HCB_comment_box .home-desc {
-	font-size: 12px;
-    /* text-transform: lowercase; */
     text-align: left;
-    display: flex;
+    display: none;
     flex-flow: row;
     align-items: baseline;
 }
@@ -267,6 +268,25 @@ a::after {
     display: none;
 }
 
+#HCB_comment_box #hcb_form textarea, #HCB_comment_box #hcb_form #hcb_form_name,
+#HCB_comment_box #hcb_form #hcb_form_website,
+#HCB_comment_box #hcb_form #hcb_form_email,
+#HCB_comment_box #hcb_form .btn,
+#HCB_comment_box #HCB_comment_form_box .btn,
+#HCB_comment_box .home-desc,
+#HCB_comment_box {
+	font-family: var(--fontText) !important; 
+}
+
+#HCB_comment_box .hcb-comment-tb button,
+#HCB_comment_box #hcb_form .home-desc a,
+#HCB_comment_box .home-desc a:visited {
+	color: var(--colorPrimary) !important;
+}
+
+.home-desc {
+	text-transform: lowercase;
+}
 
 
 
@@ -274,24 +294,19 @@ a::after {
 
 @media screen and (max-width: 800px) {
 	.page {
-		max-width: 100%;
-		padding: 1em;
-		margin-top: 15em;
-		margin-left: 0;
 	}
 
 	h1 {
-		font-size: 50px;
-		line-height: 25px;
+		font-size: 14vw;
+		top: 6.0vw;
 	}
 
 	.home {
-		margin-top: -15px;
-		font-size: 200%;
+		top: 8vw;
 	}
 
-	
 	#HCB_comment_box {
-		padding: 1em;
+		padding-inline: 1rem;
+		padding-top: 0rem;
 	}
 }

@@ -10,11 +10,12 @@
 
 	/* fonts */
 	--fontTitle: 'Almendra', serif;
-	--fontBody: 'EB Garamond', serif;
+	--fontBody: 'Buenard', serif;
 
 	/* background image */
 	--imageBackground: url("../img/art/harbor.jpg");
 	/* --imageFrame: url("../img/frame.png"); */
+	--imageText: url("../img/textures/Untitled-2.png");
 }
 
 * {
@@ -66,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 2px;
     margin-top:0;
     margin-bottom: 0;
-    background-color: var(--colorSecondary);
+    /* background-color: var(--colorSecondary); */
     /* text-align: center; */
     padding-inline: 0.9rem;
     padding-block: 0.4rem 0;
@@ -75,6 +76,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .head > p {
     margin-top: 0;
+}
+
+.head {
+    background-image: var(--imageText);
+    border-radius: 16px  0 0 0;
+
 }
 
 .container {
@@ -110,9 +117,9 @@ h1, h2, h3, h4, h5, h6 {
 #button_list {
     /* margin-bottom: 1rem; */
     overflow: hidden;
-    border: 1px solid var(--colorSecondary);
+    /* border: 1px solid var(--colorSecondary); */
     border-bottom: none;
-    background-color: var(--colorSecondary);
+    /* background-color: var(--colorSecondary); */
 
     /* margin-bottom: 1rem; */
     padding-inline: .5rem;
@@ -132,6 +139,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.3rem 0.6rem;
     /* margin-inline: 0rem; */
     background-color: var(--colorSecondary);
+    /* border: 1px solid var(--colorText); */
+    /* border-bottom: none; */
     color: var(--colorText);
     border-radius: 10px 10px 0 0;
 
@@ -152,21 +161,32 @@ h1, h2, h3, h4, h5, h6 {
 
 .poster {
     text-align: center;
+
+    border: 1px solid var(--colorSecondary);
+    box-shadow: 4px 4px 0 0 var(--colorSecondary);
+    transition: all 0.3s;
+
+    line-height: 0;
 }
 
 .poster > img {
     width: 100%;
     max-width: 270px;
 
-    border: 1px solid var(--colorSecondary);
-    box-shadow: 4px 4px 0 0 var(--colorSecondary);
-
     transition: all 0.3s;
+
+    filter: grayscale();
+    padding: 0;
+    margin: 0;
 }
 
-.poster > img:hover {
+.poster:hover {
     border-color: var(--colorPrimary);
     box-shadow: 4px 4px 0 0 var(--colorPrimary);
+}
+
+.poster:hover > img {
+    filter: none;
 }
 
 .review {
@@ -198,6 +218,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .review > h2 {
     margin-block: 0;
+    background: var(--imageText);
     background-color: var(--colorSecondary);
     padding-inline: .4rem;
     font-weight: 700;
@@ -209,6 +230,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .review > h2:hover {
+    background: none;
     background-color: var(--colorPrimary);
     color: var(--colorBackground);
 }

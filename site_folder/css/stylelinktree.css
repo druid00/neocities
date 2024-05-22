@@ -28,6 +28,7 @@
 
 	/* background image FOR ALL PAGES */
 	--imageBackground: url(../img/art/goats.jpg);
+	--imageTexture: url(../img/textures/is48dgvr.png);
 
 	--duration: 3s;
 }
@@ -91,6 +92,7 @@ a {
 	color: var(--colorSecondary);
 	text-decoration: none;
 	background-color: var(--colorBackground);
+	background-image: var(--imageTexture);
 	font-weight: bold;
 
 	border-radius: 100px;
@@ -108,6 +110,7 @@ a {
 .links a:hover {
 	color: var(--fontText);
 	background-color: var(--colorTertiary);
+	background-image: none;
 	border-color: var(--fontText);
 	/* box-shadow: none; */
 }

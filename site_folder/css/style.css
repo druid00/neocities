@@ -17,9 +17,8 @@
     --borderTertiary: 1px solid var(--colorPrimary);
 
 	/* fonts */
-	--fontTitle: 'Forum', serif;
+	--fontTitle: 'Uncial Antiqua', serif;
 	--fontBody: 'EB Garamond', serif;
-	--fontHeader: 'Forum', serif; /*'Bigshot One', serif;*/
 
 	/* background image FOR ALL PAGES */
 	--imageBackground: url("../img/art/moonlit2.jpg");
@@ -91,10 +90,10 @@ a:hover{
 
 
 h1.logo {
-	font-family: var(--fontBody);
+	font-family: var(--fontTitle);
 	text-transform: lowercase;
-	font-size: 2.5rem;
-	font-style: italic;
+	font-size: 2.1rem;
+	/* font-style: italic; */
 
     margin: 0;
 }

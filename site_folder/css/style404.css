@@ -12,9 +12,8 @@
 	--colorSecondary: #ba591d;
 
 	/* fonts */
-	--fontTitle: 'Forum', serif;
+	--fontTitle: 'Uncial Antiqua', serif;
 	--fontBody: 'EB Garamond', serif;
-	--fontHeader: 'Forum', serif; /*'Bigshot One', serif;*/
 
 	/* background image FOR ALL PAGES */
 	--imageBackground: url("../img/art/winterscape.jpg");
@@ -77,4 +76,15 @@ img:hover {
 .home:hover {
 	color: var(--colorSecondary);
 	border-color: var(--colorSecondary);
+}
+
+h1 {
+	/* font-family: var(--fontTitle); */
+	font-weight: normal;
+	font-size: 200%;
+	margin: 0;
+}
+
+p {
+	margin-block: .4rem 1rem;
 }
