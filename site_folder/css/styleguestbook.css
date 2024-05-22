@@ -284,6 +284,15 @@ a {
 	color: var(--colorPrimary) !important;
 }
 
+#HCB_comment_box #hcb_form .btn,
+#HCB_comment_box #HCB_comment_form_box .btn,
+#HCB_comment_box #hcb_form .btn-secondary,
+#HCB_comment_box #HCB_comment_form_box .btn-secondary {
+	background-color: var(--colorPrimary) !important;
+	color: var(--colorBackground) !important;
+	border: none !important;
+}
+
 .home-desc {
 	text-transform: lowercase;
 }
