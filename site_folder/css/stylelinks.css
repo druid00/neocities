@@ -107,7 +107,8 @@ h2 {
 	/* margin-block: 1rem; */
 	/* border-radius: 50px  50px 0 0; */
 	
-	/* border: 1px outset var(--colorPrimary); */
+	border: 1px outset var(--colorPrimary);
+	/* border-radius: 0 250px 0 0; */
 }
 
 h1 {
@@ -296,7 +297,7 @@ ul.socials {
 }
 
 ul {
-	list-style-type: "\21B3";
+	list-style-type: "\2937";
 	margin: 0;
 	/* padding-left: 13px; */
 }
@@ -349,7 +350,7 @@ ul.resources > li::marker {
 }
 
 ul.resources ul {
-	padding-left: 24px;
+	padding-left: 18px;
 }
 
 ul.resources ul > li {

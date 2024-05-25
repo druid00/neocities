@@ -1,0 +1,162 @@
+/* v1.1
+
+/* root settings */
+
+:root {
+	--colorBackground: #1f1713;
+	--colorText: #c3b6a1;
+	--colorPrimary: #a58651;
+	--colorSecondary: #d54b1c;
+	--colorTertiary: #f5c05f;
+
+	/* fonts */
+	--fontText: 'Crimson Pro', serif;
+	--fontTitle: 'IM Fell Double Pica SC', serif; /*'Bigshot One', serif;*/
+
+	/* background image FOR ALL PAGES */
+	--imageBackground: url("../img/art/danby.jpg");
+	--imageFrame: url("../img/frame2.png");
+	--imageWood: url("../img/textures/wood.png");
+}
+
+
+/* global site structure */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--colorBackground);
+	background-image: var(--imageBackground);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+
+	color: var(--colorText);
+	font-family: var(--fontText);
+	margin: 0;
+	padding: 0;
+
+	font-size: 18px;
+
+	font-style: italic;
+	text-align: justify;
+}
+
+.page {
+	max-width: 590px;
+	margin-inline: auto;
+	background: var(--colorBackground);
+	padding-inline: 110px;
+	padding-block: 90px;
+	margin-block: 0px;
+	position: relative;
+
+	background: var(--imageWood);
+	background-attachment: fixed;
+	/* box-shadow: 0 30px 60px 0 var(--colorBackground); */
+}
+
+#frame::before {
+	content: "";
+	background: var(--imageFrame);
+	display: inline;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 50px;
+	background-size: 91px;
+	/* border-right: 3px double var(--colorPrimary); */
+}
+#frame::after {
+	content: "";
+	background: var(--imageFrame);
+	display: inline;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 50px;
+	background-size: 91px;
+	/* border-left: 3px double var(--colorPrimary); */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--fontTitle);
+	color: var(--colorPrimary);
+}
+
+a {
+	color: var(--colorSecondary);
+	font-weight: bold;
+	transition: all .5s;
+}
+a:hover{
+	color: var(--colorTertiary);
+}
+.outbound::after {
+	content: "\279A";
+}
+
+.home {
+	display:block;
+	/* margin-inline: auto; */
+	float: right;
+	font-size: 140%;
+	text-decoration: none;
+
+	--icon-width: 40px;
+	width: var(--icon-width);
+	height: var(--icon-width);
+	text-align: center;
+	border-radius: 1000px;
+	padding-top: 6px;
+	/* margin-block: 1.5rem; */
+	color: var(--colorPrimary);
+}
+
+section {
+	margin-block: 3rem;
+}
+
+hr {
+	height: 0px;
+	border: none;
+	border-bottom: 1px dotted var(--colorPrimary);
+}
+
+ul {
+	padding-left: 16px;
+	list-style-type: "\2937";
+	margin-top: 0;
+}
+
+ul li {
+	padding-left: 5px;
+}
+
+.thumb {
+	width: 150px;
+	display: block;
+	/* border-radius: 8px; */
+	border: 3px double var(--colorPrimary);
+	/* filter: grayscale(); */
+	margin-inline: auto;
+}
+
+.list-header {
+	margin-bottom: 4px;
+	text-decoration: underline;
+}
+
+/* mobile */
+
+@media screen and (max-width: 550px) {
+}
+
+
+@media screen and (min-width: 1100px) {
+
+}
