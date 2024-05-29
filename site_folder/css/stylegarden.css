@@ -1,0 +1,76 @@
+/* v1.1
+
+/* root settings */
+
+:root {
+	/* column widths */
+	--widthContent: 1000px;
+
+	/* general page and text colours */
+	--colorBackground: #131310;
+	--colorText: #cec8bf;
+
+	/* accent colours */
+	--colorPrimary: #dbb281;
+	--colorSecondary: #9598bb;
+	--colorTertiary: #aa4c3d;
+
+	/* fonts */
+	--fontText: 'El Messiri', serif;
+	--fontTitle: 'Almendra', serif; /*'Bigshot One', serif;*/
+
+	/* borders */
+
+	/* gallery settings */
+	--columnCount: 2;
+	--columnGap: 20px;
+
+	/* background image FOR ALL PAGES */
+	--imageBackground: url("../img/art/golfe.jpg");
+	/* --galleryBackground: url("../img/art/blizzard.jpg"); */
+}
+
+
+/* global site structure */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--colorBackground);
+	background-image: var(--imageBackground);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+
+	color: var(--colorText);
+	font-family: var(--fontText);
+	line-height: 1.5em;
+}
+
+/* gallery */
+
+img.png {
+	box-shadow: none;
+	border: none;
+}
+
+img.png:hover {
+	box-shadow: none;
+	border: none;
+}
+
+.page {
+}
+
+
+/* mobile */
+
+@media screen and (max-width: 550px) {
+	
+}
+
+
+@media screen and (min-width: 1100px) {
+}

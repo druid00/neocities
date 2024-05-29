@@ -163,12 +163,6 @@ img {
 	
 }
 
-img:hover {
-    cursor: -moz-zoom-in; 
-    cursor: -webkit-zoom-in; 
-    cursor: zoom-in;
-}
-
 @keyframes rotateAnimationSmall {
     0% {
         transform: perspective(3000px) rotateY(-10deg) rotateZ(1deg);
