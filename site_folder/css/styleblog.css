@@ -59,6 +59,7 @@ body {
 
 	color: var(--colorText);
 	font-family: var(--fontText);
+	line-height: 130%;
 	margin: 0;
 	padding: 0;
 }
@@ -153,6 +154,7 @@ h1 {
 
 .text p {
 	text-align: justify;
+	text-transform: lowercase;
 }
 
 
@@ -305,11 +307,6 @@ details > div {
 	background-color: var(--colorPrimary);
 }
 
-.dates {
-	width: 92px;
-    vertical-align: top;
-}
-
 .wrapper {
 	/* display: flex;
 	margin-left: 60px;
@@ -350,46 +347,21 @@ article > a {
 	margin-right: 3px;
 }
 
-.sidebar {
-	background: var(--colorBackground);
-}
-
 /* FLEX */
-
-.flex-container-titles {
-	display: flex;
-	height: 150px;
-	/* background-color: #f1f1f1; */
-	overflow-x: scroll;
-	overflow-y: hidden;
-}
-
-.flex-container-titles > article {
-  /* background-color: blue; */
-  /* color: white; */
-  width: 140px;
-  margin: 10px;
-  /* text-align: center; */
-  /* line-height: 75px; */
-  /* font-size: 30px; */
-}
 
 .flex-container {
 	display: flex;
-	width: 100%;
-	height: 100%;
-	flex-direction: column; 
+	/* width: 100%; */
+	/* height: 100%; */
+	flex-direction: row; 
 	/* background-color: blue; */
 	overflow: hidden;
-	
-	/* position:absolute; */
-	/* display:block; */
-
-	/* border-radius: 20px; */
 }
 
-.row-1 {
-	/* background-color: lime;  */
+.sidebar {
+	background: var(--colorBackground);
+	border: 1px solid var(--colorSecondary);
+	width: 200px;
 }
 
 .row-2 {
@@ -398,23 +370,18 @@ article > a {
 	margin: 0;
 	padding: 0; 
 	height: 400px;
+	width: 600px;
 	background: var(--colorBackground);
+
 	/* border: 5px red solid; */
-	border-image-source: var(--imageFrameBorder);
+	/* border-image-source: var(--imageFrameBorder);
     border-width: 2rem;
     border-image-repeat: repeat;
     border-image-slice: 65;
-	border-image-repeat: repeat;
+	border-image-repeat: repeat; */
 }
 
 /* body, html {width: 100%; height: 100%; margin: 0; padding: 0} */
-
-#asd {
-	margin-inline: auto;
-	text-align: center;
-	display: block;
-	margin-top: 20vh;
-}
 
 /* mobile */
 
