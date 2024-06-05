@@ -3,34 +3,37 @@
 /* root settings */
 
 :root {
-	--widthContent: 900px;
+	--widthPage: 900px;
+	--widthSidebar: 200px;
 
-	/* --colorBackground: #c0bbac;
-	--colorText: #2d3338;
+	--colorBackground: #b8ad8b;
+	--colorText: #211b13;
 
-	--colorPrimary: #5D676E;
-	--colorSecondary: #73522d;
-	--colorTertiary: #a89f87; */
+	--colorPrimary: #917027;
+	--colorSecondary: #566126;
+	--colorTertiary: #a89f87;
 
 
 	/* dark mode */
 
-	--colorBackground: #211b13;
+	/* --colorBackground: #211b13;
 	--colorText: #d4cebb;
 
 	--colorPrimary: #766b2f;
 	--colorSecondary: #b48052;
-	--colorTertiary: #434449;
+	--colorTertiary: #434449; */
 
 
-	--fontTitle: "Almendra", serif;
+	--fontTitle: "Xanh Mono", serif;
 	/* --fontText: 'Source Sans 3', serif; */
 	--fontText: 'Gentium Book Plus', serif;
+	--fontText: 'Xanh Mono', serif;
 	
 	--imageBackground: url(../img/art/bathing.jpg);
 	--imageFrame: url(../img/frame2.png);
 	--imageOcean: url(../img/textures/ocean.png);
-	--imageFrameBorder: url(../img/textures/LOLframe.png);
+	--imageFrameBorder: url(../img/textures/tumblr_6ddf9e5e8e60d6e516d1c419baa43f97_89bee275_500.png);
+	--imagePage: url(../img/textures/BookOpen0097_2_download600.png);
 
 	
 	--height: 90vh;
@@ -65,17 +68,18 @@ body {
 }
 
 body.post {
-	background: var(--colorBackground);
+	background: none;
+	/* background: var(--colorBackground); */
 	/* background: var(--imageOcean); */
 	/* background-image: var(--imageBackground); */
 	/* background-size: cover; */
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 	/* background-position: center; */
 
 	color: var(--colorText);
 	font-family: var(--fontText);
 
-	padding: 14px 30px;
+	padding: 8px 20px;
 	/* margin: 0; */
 	/* padding: 0; */
 }
@@ -114,9 +118,9 @@ hr {
 }
 
 .page {
-	max-width: var(--widthContent);
+	width: var(--widthPage);
 	margin-inline: auto;
-	
+	position: relative;
 }
 
 
@@ -153,7 +157,7 @@ h1 {
 }
 
 .text p {
-	text-align: justify;
+	/* text-align: justify; */
 	text-transform: lowercase;
 }
 
@@ -284,104 +288,47 @@ details > div {
 	top: -.4rem;
 }
 
-/* ?????? */
-
-.icons-list > * {
-	--icon-size: 40px;
-	height: var(--icon-size);
-	width: var(--icon-size);
-	border-radius: 100px;
-	
-	text-align: center;
-	font-size: 150%;
-	padding-top: 2px;
-
-	transition: all .15s;
-
-	/* float: right; */
-	/* margin-left: 5px; */
-}
-
-.icons-list > *:hover {
-	color: var(--colorBackground);
-	background-color: var(--colorPrimary);
-}
-
-.wrapper {
-	/* display: flex;
-	margin-left: 60px;
-	margin-top: var(--margin-top);
-	border-radius: 30px 0 0 30px;
-	overflow: hidden; */
-}
-.blog {
-	/* margin-left: 90px; */
-	position: relative;
-}
-.blog iframe {
-	display: inline;
-	border: none;
-	
-	/* height: var(--height); */
-	/* width: var(--width); */
-}
-
-.blog-holder {
-	/* height: var(--height); */
-	/* width: var(--width); */
-	background: var(--colorBackground);
-
-}
-
-article {
-	/* margin-block: 20px; */
-}
-article > p {
-	margin: 0;
-	/* display: inline; */
-	font-style: italic;
-}
-article > a {
-	padding-inline: 0px;
-	font-weight: normal;
-	margin-right: 3px;
-}
 
 /* FLEX */
 
 .flex-container {
-	display: flex;
-	/* width: 100%; */
-	/* height: 100%; */
-	flex-direction: row; 
-	/* background-color: blue; */
-	overflow: hidden;
 }
 
 .sidebar {
 	background: var(--colorBackground);
 	border: 1px solid var(--colorSecondary);
-	width: 200px;
+	width: var(--widthSidebar);
 }
 
-.row-2 {
-	/* flex-grow: 1; */
-	border: none;
+.content {
+	/* border: none; */
 	margin: 0;
 	padding: 0; 
-	height: 400px;
-	width: 600px;
-	background: var(--colorBackground);
+	height: 500px;
+	width: 314px;
+	/* background: var(--colorBackground); */
 
-	/* border: 5px red solid; */
-	/* border-image-source: var(--imageFrameBorder);
-    border-width: 2rem;
-    border-image-repeat: repeat;
-    border-image-slice: 65;
-	border-image-repeat: repeat; */
+	position: relative;
+	/* left: var(--widthSidebar); */
+	top: 28px;
+	left: 154px
 }
 
-/* body, html {width: 100%; height: 100%; margin: 0; padding: 0} */
+.blog-container {
+	height: 700px;
+	width: 540px;
+	background: var(--imageFrameBorder);
+	background-repeat: round;
+	position: absolute;
+	top: 0;
+	left: var(--widthSidebar);
+	/* box-shadow: 6px 6px 0 0 black; */
+}
+
+iframe {
+	background-color: var(--colorBackground);
+	border: 3px double var(--colorPrimary);
+}
 
 /* mobile */
 

@@ -13,7 +13,7 @@
 	--colorTertiary: #3d4049; */
 
 	/* palestine theme */
-	--colorBackground: #0a1010;
+	--colorBackground: #0e1616;
 	--colorText: #c7bca9;
 
 	--colorPrimary: #9fb229;
@@ -38,7 +38,7 @@
 	--colorTertiary: #6e7588; */
 
 
-	--fontTitle: "Tapestry", serif;
+	--fontTitle: "Anybody", serif;
 	--fontText: 'DM Sans', serif;
 
 	--imageBackground: url(../img/art/procession.jpg);
@@ -359,11 +359,14 @@ h2 {
 
 .use {
 	list-style-type: none;
-	margin-left: 0.3em;
+	margin-left: 0em;
 	padding: 0;
 }
+.use li {
+	text-indent: 12px hanging;
+}
 .use li::before {
-	content:"✽";
+	content:"•";
 	margin-right: 0.3em;
 }
 
@@ -375,7 +378,7 @@ h2 {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--fontTitle);
-	font-weight: 900;
+	font-weight: 800;
 	/* text-transform: uppercase; */
 	color: var(--colorPrimary);
 
@@ -388,14 +391,13 @@ h1 {
 }
 
 h1, h2 {
-	
 	line-height: 0.85em;
 	font-size: 250%;
 	margin-bottom: .25em;
 }
 
 h1 {
-	font-size: 320%;
+	font-size: 280%;
 }
 
 

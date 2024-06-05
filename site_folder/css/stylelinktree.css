@@ -4,7 +4,7 @@
 
 :root {
 	/* column widths */
-	--widthContent: 500px;
+	--widthContent: 340px;
 
 	/* general page and text colours */
 	--colorBackground: #181b20;
@@ -21,14 +21,11 @@
 
 	/* fonts */
 	--fontTitle: "Rakkas", serif;
-	--fontText: 'Rubik', serif;
-
-	/* borders */
-	--borderSolid: 1px solid var(--colorBorder);
+	--fontText: 'Xanh Mono', serif;
 
 	/* background image FOR ALL PAGES */
 	--imageBackground: url(../img/art/goats.jpg);
-	--imageTexture: url(../img/textures/is48dgvr.png);
+	--imageTexture: var(--colorBackground);
 
 	--duration: 3s;
 }
@@ -66,9 +63,7 @@ p {
 
 
 .page { 
-	/* margin: 5em; */
 	margin-top: 9em;
-	/* margin-left: 10%; */
 	margin-inline: auto;
 	
 	max-width: var(--widthContent);
@@ -85,6 +80,8 @@ a {
 .links > a {
 	display: block;
 	text-align: center;
+	text-transform: lowercase;
+	font-weight: 900;
 	
 	padding: .5rem;
 	margin-block: .7rem;
@@ -93,10 +90,9 @@ a {
 	text-decoration: none;
 	background-color: var(--colorBackground);
 	background-image: var(--imageTexture);
-	font-weight: bold;
 
 	border-radius: 100px;
-	border: 2px solid var(--colorSecondary);
+	border: 1px solid var(--colorSecondary);
 	box-shadow: 1px 1px 0 1px var(--colorBackground);
 
 	transition: .25s;
@@ -112,7 +108,6 @@ a {
 	background-color: var(--colorTertiary);
 	background-image: none;
 	border-color: var(--fontText);
-	/* box-shadow: none; */
 }
 
 h1, h2 { 
@@ -122,21 +117,30 @@ h1, h2 {
 	line-height: 50%;
 
 	text-shadow: none;
-	text-shadow: .2rem .2rem var(--colorBackground);
+	text-shadow:
+	2px 2px var(--colorBackground),
+	-2px 2px var(--colorBackground),
+	2px -2px var(--colorBackground),
+	-2px -2px var(--colorBackground),
+	
+	0px 2px var(--colorBackground),
+	0px -2px var(--colorBackground),
+	2px 0px var(--colorBackground),
+	-2px 0px var(--colorBackground)
+	;
 
 	border-radius: 100px 0 100px 0;
-	padding-bottom: 0;
-	text-decoration: underline wavy 2px;
+	/* text-decoration: underline solid 2px; */
 	text-align: center;
 }
 
 h1 { 
-	font-size: 280%;
+	font-size: 340%;
 	margin-bottom: 2rem;
 }
 
 h2 {
-	font-size: 180%;
+	font-size: 250%;
 	margin-top: 2rem;
 	/* text-decoration: underline wavy 2px; */
 }
@@ -149,7 +153,7 @@ h2 {
 	margin-inline: auto;
 
 	color: var(--colorPrimary);
-	border: 2px solid var(--colorPrimary);
+	border: 1px solid var(--colorPrimary);
 	font-size: 140%;
 	background-color: var(--colorBackground);
 	border-radius: 100px;

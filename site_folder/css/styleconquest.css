@@ -17,6 +17,7 @@
 	--imageBackground: url("../img/art/danby.jpg");
 	--imageFrame: url("../img/frame2.png");
 	--imageWood: url("../img/textures/wood.png");
+	--imageFrameBorder: url("../img/textures/PaintingFrames0013_download600.png");
 }
 
 
@@ -141,9 +142,13 @@ ul li {
 	width: 150px;
 	display: block;
 	/* border-radius: 8px; */
-	border: 3px double var(--colorPrimary);
 	/* filter: grayscale(); */
 	margin-inline: auto;
+
+	box-sizing: content-box;
+	border: 37px solid var(--colorPrimary);
+	border-image-source: var(--imageFrameBorder);
+	border-image-slice: 18%;
 }
 
 .list-header {

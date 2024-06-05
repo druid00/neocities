@@ -10,7 +10,7 @@
 
 	/* fonts */
 	--fontTitle: 'Almendra', serif;
-	--fontBody: 'Buenard', serif;
+	--fontBody: 'Xanh Mono', serif;
 
 	/* background image */
 	--imageBackground: url("../img/art/harbor.jpg");
@@ -138,13 +138,14 @@ h1, h2, h3, h4, h5, h6 {
 
     padding: 0.3rem 0.6rem;
     /* margin-inline: 0rem; */
-    background-color: var(--colorSecondary);
+    /* background-color: var(--colorSecondary); */
     /* border: 1px solid var(--colorText); */
     /* border-bottom: none; */
     color: var(--colorText);
     border-radius: 10px 10px 0 0;
 
     transition: all 0.3s;
+    background: none;
 }
 
 .btn:hover {

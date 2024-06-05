@@ -23,6 +23,7 @@
 	--imageBackground: url(../img/art/violinist.jpg);
 	--imageBeige: url(../img/textures/tiles3.png);
 	--imageGreen: url(../img/textures/Untitled-3A.png);
+	--imageDecor: url(../img/textures/tumblr_bbbdb6c8d08b694fd7951d4755ec7079_a7359e67_1280.png);
 }
 
 
@@ -96,7 +97,7 @@ h2 {
 	background-color: var(--colorPrimary);
 	color: var(--colorBackground);
 	padding: 7px;
-	/* padding-left: 20px; */
+	padding-left: 46px;
 
 	background-image: var(--imageBeige);
 	background-size: 80px;
@@ -104,11 +105,27 @@ h2 {
 	/* border: 3px double var(--colorPrimary); */
 	/* filter: brightness(1.7); */
 	margin: 0;
+	margin-bottom: 22px;
 	/* margin-block: 1rem; */
 	/* border-radius: 50px  50px 0 0; */
 	
-	border: 1px outset var(--colorPrimary);
-	/* border-radius: 0 250px 0 0; */
+	/* border: 1px outset var(--colorPrimary); */
+	border-radius: 0 250px 0 0;
+	position: relative;
+}
+
+h2::before {
+	content: '';
+	position: absolute;
+	top: -18px;
+	left: -23px;
+	height: 70px;
+	width: 70px;
+	display: inline-block;
+	background-image: var(--imageDecor);
+	background-size: 70px;
+
+	filter: drop-shadow(4px 1px 0px var(--colorBackground));
 }
 
 h1 {
@@ -139,6 +156,7 @@ hr {
 .buttons img {
 	border: 3px double var(--colorPrimary);
 
+	box-sizing: content-box;
 	transition: all .15s;
 }
 
