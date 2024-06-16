@@ -79,6 +79,21 @@ img:hover {
     border-color: var(--colorSecondary);
 }
 
+img.png {
+    border: none;
+}
+
+.plushies {
+    user-select: none;
+    position: relative;
+    top: -16px;
+}
+
+.outbound::after {
+    
+	content:"\279A";
+}
+
 a {
 	color: var(--colorPrimary);
     transition: all .15s;
