@@ -39,9 +39,9 @@
 
 
 	--fontTitle: "Anybody", serif;
-	--fontText: 'DM Sans', serif;
+	--fontText: 'EB Garamond', serif;
 
-	--imageBackground: url(../img/art/procession.jpg);
+	--imageBackground: url(../img/art/golfe.jpg);
 	--imageCanvas: url(../img/canvas.png);
 	--imageFrame: url(../img/frame.png);
 
@@ -81,8 +81,28 @@ body {
 	font-family: var(--fontText);
 
 	scroll-behavior: smooth;
+	position: relative;
+	height: 95vh;
 
-	margin-top: -3em;
+	/* margin-top: -3em; */
+}
+
+.closed {
+	width: 310px;
+	background: var(--colorText);
+	color: var(--colorBackground);
+	
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	font-style: italic;
+	border: 1px var(--colorBackground) solid;
 }
 
 b {

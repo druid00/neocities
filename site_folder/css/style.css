@@ -71,7 +71,7 @@ hr {
 
 img {
     border: var(--borderTertiary);
-    transition: filter .25s;
+    transition: filter .6s;
 }
 
 img:hover {
@@ -85,8 +85,15 @@ img.png {
 
 .plushies {
     user-select: none;
-    position: relative;
-    top: -16px;
+    text-align: center;
+    /* position: relative; */
+    /* top: -16px; */
+}
+.plushies img {
+    transform: all .5s;
+}
+.plushies img:hover {
+    /* filter: blur(.3); */
 }
 
 .outbound::after {
@@ -339,9 +346,9 @@ h3 {
     text-align: left;
     border: var(--borderTertiary);
     padding: .6rem;
-    padding-block: 0;
+    padding-block: .2rem;
     margin-block: 1rem;
-    height: 120px;
+    height: 150px;
     overflow: auto;
     font-size: 90%;
     /* width: 90%; */
@@ -351,6 +358,7 @@ h3 {
 
 .changelog > p {
     margin-block: .5rem;
+    /* margin-block: 0rem; */
 }
 
 .changelog i {
@@ -360,6 +368,16 @@ h3 {
 .changelog i::after {
     content: "—";
     margin-left: .2rem;
+}
+
+.changelog ul {
+    padding-left: 9px;
+    list-style: "—";
+    margin-top: 0;
+}
+
+.changelog ul li {
+    padding-left: 2px;
 }
 
 

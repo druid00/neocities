@@ -96,11 +96,15 @@ a {
 	box-shadow: 1px 1px 0 1px var(--colorBackground);
 
 	transition: .25s;
-}
 
-.links a.crown {
+	
 	color: var(--colorPrimary);
 	border-color: var(--colorPrimary);
+}
+
+.links a.crown::before {
+	/* content:"★"; */
+	/* margin-right: 5px; */
 }
 
 .links a:hover {
@@ -118,10 +122,10 @@ h1, h2 {
 
 	text-shadow: none;
 	text-shadow:
-	2px 2px var(--colorBackground),
-	-2px 2px var(--colorBackground),
-	2px -2px var(--colorBackground),
-	-2px -2px var(--colorBackground),
+	1px 1px var(--colorBackground),
+	-1px 1px var(--colorBackground),
+	1px -1px var(--colorBackground),
+	-1px -1px var(--colorBackground),
 	
 	0px 2px var(--colorBackground),
 	0px -2px var(--colorBackground),
